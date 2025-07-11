@@ -176,7 +176,7 @@ outlines:
     - operation: subtract
       name: raw_cutouts
 pcbs:
-  main:
+  left:
     template: kicad8
     outlines:
       main:
@@ -185,6 +185,7 @@ pcbs:
     footprints:
       pg1316_switches:
         what: custom/pg1316s
+        asym: source
         where: true
         params:
           from: "{{col_net}}"
@@ -192,6 +193,7 @@ pcbs:
       diode:
         what: ceoloide/diode_tht_sod123
         where: true
+        asym: source
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
@@ -200,40 +202,87 @@ pcbs:
           reversible: true
         adjust: 
           shift: [ 0,2.7]
-      nice_nano:
+      mcu:
         what: custom/xiao_nRF52840
-        params:
-          #side: "B"
+        asym: source
         where:
-          ref.aggregate.parts: [ matrix_inner_top, mirror_matrix_inner_top]
-          shift: [ 0,0]
-          rotate: 0
+          - ref: matrix_inner_top
+          - shift: [-2.5, 2.5]
+
+
       reset:
+        asym: source
         what: ceoloide/reset_switch_tht_top
         params:
           from: GND
           to: RST
-        where:
-          ref.aggregate.parts: [ matrix_inner_bottom, mirror_matrix_inner_bottom]
-          shift: [ 0,-1]
-          rotate: -90
       battery:
+        asym: source
         what: ceoloide/battery_connector_jst_ph_2
         params:
           side: "F"
           BAT_P: BAT_P
           BAT_N: GND
-        where:
-          ref.aggregate.parts: [ matrix_inner_bottom, mirror_matrix_inner_bottom]
-          shift: [ -1,-1]
-          rotate: 0
       power:
         what: ceoloide/power_switch_smd_side
+        asym: source
         params:
           from: BAT_P
           to: RAW
+
+  right:
+    template: kicad8
+    outlines:
+      main:
+        outline: board_right
+
+    footprints:
+      pg1316_switches:
+        what: custom/pg1316s
+        asym: clone
+        where: true
+        params:
+          from: "{{col_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: ceoloide/diode_tht_sod123
+        where: true
+        asym: clone
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          side: "F"
+          include_traces_vias: true
+          reversible: true
+        adjust: 
+          shift: [ 0,2.7]
+      mcu:
+        what: custom/xiao_nRF52840
+        asym: clone
         where:
-          ref.aggregate.parts: [ matrix_inner_top, mirror_matrix_inner_top]
-          shift: [ 1,0]
-          rotate: 0
+          - ref: matrix_inner_top
+          - shift: [-2.5, 2.5]
+
+      reset:
+        asym: clone
+        what: ceoloide/reset_switch_tht_top
+        params:
+          from: GND
+          to: RST
+
+      battery:
+        asym: clone
+        what: ceoloide/battery_connector_jst_ph_2
+        params:
+          side: "F"
+          BAT_P: BAT_P
+          BAT_N: GND
+
+      power:
+        what: ceoloide/power_switch_smd_side
+        asym: clone
+        params:
+          from: BAT_P
+          to: RAW
+
 

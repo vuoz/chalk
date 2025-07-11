@@ -21,6 +21,13 @@ module.exports = {
         CLK: { type: 'net', value: 'CLK' },
     },
     body: p => {
+        function getRotation(rot) {
+            if (rot > 360) {
+                rot = rot - 360;
+            }
+            return rot;
+        }
+
 
         return `(footprint "XIAO-nRF52840-SMD"
 	(version 20240108)
@@ -283,7 +290,7 @@ module.exports = {
 		(uuid "7bc235cf-ac41-4529-806b-158b8898c264")
 	)
 	(pad "1" smd roundrect
-		(at -8.455 -7.62 180)
+		(at -8.455 -7.62 ${getRotation(p.rot + 180)} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -292,7 +299,7 @@ module.exports = {
         ${p.P0.str}
 	)
 	(pad "1" thru_hole circle
-		(at -7.62 -7.62 180)
+		(at -7.62 -7.62 ${getRotation(p.rot + 180)} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -301,7 +308,7 @@ module.exports = {
         ${p.P0.str}
 	)
 	(pad "2" smd roundrect
-		(at -8.455 -5.08 180)
+		(at -8.455 -5.08 ${getRotation(p.rot + 180)} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -311,7 +318,7 @@ module.exports = {
         ${p.P1.str}
 	)
 	(pad "2" thru_hole circle
-		(at -7.62 -5.08 180)
+		(at -7.62 -5.08 ${getRotation(p.rot + 180)} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -321,7 +328,7 @@ module.exports = {
         ${p.P1.str}
 	)
 	(pad "3" smd roundrect
-		(at -8.455 -2.54 180)
+		(at -8.455 -2.54 ${getRotation(p.rot + 180)} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -331,7 +338,7 @@ module.exports = {
         ${p.P2.str}
 	)
 	(pad "3" thru_hole circle
-		(at -7.62 -2.54 180)
+		(at -7.62 -2.54 ${getRotation(p.rot + 180)} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -342,7 +349,7 @@ module.exports = {
         ${p.P2.str}
 	)
 	(pad "4" smd roundrect
-		(at -8.455 0 180)
+		(at -8.455 0 ${getRotation(p.rot + 180)} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -352,7 +359,7 @@ module.exports = {
         ${p.P3.str}
 	)
 	(pad "4" thru_hole circle
-		(at -7.62 0 180)
+		(at -7.62 0 ${getRotation(p.rot + 180)} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -362,7 +369,7 @@ module.exports = {
         ${p.P3.str}
 	)
 	(pad "5" smd roundrect
-		(at -8.455 2.54 180)
+		(at -8.455 2.54 ${getRotation(p.rot + 180)})
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -372,7 +379,7 @@ module.exports = {
         ${p.P4.str}
 	)
 	(pad "5" thru_hole circle
-		(at -7.62 2.54 180)
+		(at -7.62 2.54 ${getRotation(p.rot + 180)} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -381,7 +388,7 @@ module.exports = {
         ${p.P4.str}
 	)
 	(pad "6" smd roundrect
-		(at -8.455 5.08 180)
+		(at -8.455 5.08 ${getRotation(p.rot + 180)} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -391,7 +398,7 @@ module.exports = {
         ${p.P5.str}
 	)
 	(pad "6" thru_hole circle
-		(at -7.62 5.08 180)
+		(at -7.62 5.08 ${getRotation(p.rot + 180)} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -400,7 +407,7 @@ module.exports = {
         ${p.P5.str}
 	)
 	(pad "7" smd roundrect
-		(at -8.455 7.62 180)
+		(at -8.455 7.62 ${getRotation(p.rot + 180)} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -409,7 +416,7 @@ module.exports = {
         ${p.P6.str}
 	)
 	(pad "7" thru_hole circle
-		(at -7.62 7.62 180)
+		(at -7.62 7.62 ${getRotation(p.rot + 180)} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -418,7 +425,7 @@ module.exports = {
         ${p.P6.str}
 	)
 	(pad "8" thru_hole circle
-		(at 7.62 7.62)
+		(at 7.62 7.62 ${p.rot} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -428,7 +435,7 @@ module.exports = {
         ${p.P7.str}
 	)
 	(pad "8" smd roundrect
-		(at 8.455 7.62)
+		(at 8.455 7.62 ${p.rot} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -438,7 +445,7 @@ module.exports = {
         ${p.P7.str}
 	)
 	(pad "9" thru_hole circle
-		(at 7.62 5.08)
+		(at 7.62 5.08 ${p.rot} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -448,7 +455,7 @@ module.exports = {
         ${p.P8.str}
 	)
 	(pad "9" smd roundrect
-		(at 8.455 5.08)
+		(at 8.455 5.08 ${p.rot} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -458,7 +465,7 @@ module.exports = {
         ${p.P8.str}
 	)
 	(pad "10" thru_hole circle
-		(at 7.62 2.54)
+		(at 7.62 2.54 ${p.rot})
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -467,7 +474,7 @@ module.exports = {
         ${p.P9.str}
 	)
 	(pad "10" smd roundrect
-		(at 8.455 2.54)
+		(at 8.455 2.54 ${p.rot} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -477,7 +484,7 @@ module.exports = {
         ${p.P9.str}
 	)
 	(pad "11" thru_hole circle
-		(at 7.62 0)
+		(at 7.62 0 ${p.rot} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -486,7 +493,7 @@ module.exports = {
         ${p.P10.str}
 	)
 	(pad "11" smd roundrect
-		(at 8.455 0)
+		(at 8.455 0 ${p.rot} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -495,7 +502,7 @@ module.exports = {
         ${p.P10.str}
 	)
 	(pad "12" thru_hole circle
-		(at 7.62 -2.54)
+		(at 7.62 -2.54 ${p.rot} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -506,7 +513,7 @@ module.exports = {
 
 	)
 	(pad "12" smd roundrect
-		(at 8.455 -2.54)
+		(at 8.455 -2.54 ${p.rot} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -515,7 +522,7 @@ module.exports = {
         ${p.VCC33.str}
 	)
 	(pad "13" thru_hole circle
-		(at 7.62 -5.08)
+		(at 7.62 -5.08 ${p.rot} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -524,7 +531,7 @@ module.exports = {
         ${p.GND.str}
 	)
 	(pad "13" smd roundrect
-		(at 8.455 -5.08)
+		(at 8.455 -5.08 ${p.rot} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -533,7 +540,7 @@ module.exports = {
         ${p.GND.str}
 	)
 	(pad "14" thru_hole circle
-		(at 7.62 -7.62)
+		(at 7.62 -7.62 ${p.rot} )
 		(size 1.524 1.524)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
@@ -543,7 +550,7 @@ module.exports = {
         ${p.VCC5.str}
 	)
 	(pad "14" smd roundrect
-		(at 8.455 -7.62)
+		(at 8.455 -7.62 ${p.rot} )
 		(size 2.432 1.524)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.1)
@@ -558,7 +565,7 @@ module.exports = {
     (fp_line (start -2 0.6) (end  -2 -3.1) (layer "Edge.Cuts") (width 0.15))
 
     (pad "15" thru_hole circle
-		(at -5 -0.3135 180)
+		(at -5 -0.3135 ${getRotation(p.rot + 180)} )
         (size 1.5 1.5)
         (drill 1.0)
 		(layers "F.Cu" "F.Paste" "F.Mask")
@@ -566,7 +573,7 @@ module.exports = {
         ${p.RAW.str}
     )
     (pad "16" thru_hole circle
-		(at -5 -2.2185 180)
+		(at -5 -2.2185 ${getRotation(p.rot + 180)} )
         (size 1.5 1.5)
         (drill 1.0)
 		(layers "F.Cu" "F.Paste" "F.Mask")
@@ -574,7 +581,7 @@ module.exports = {
         ${p.GND.str}
     )
 	(pad "17" smd roundrect
-		(at 3.755 9.2369 270)
+		(at 3.755 9.2369 ${getRotation(p.rot + 270)} )
 		(size 2.5 1.1)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.25)
@@ -583,10 +590,9 @@ module.exports = {
 		(uuid "912f339b-da23-4429-b096-f30b25320685")
 	)
 	(pad "18" smd roundrect
-		(at 5.66 9.2369 270)
+		(at 5.66 9.2369 ${getRotation(p.rot + 270)} )
 		(size 2.5 1.1)
-		(layers "F.Cu" "F.Paste" "F.Mask")
-		(roundrect_rratio 0.25)
+		(layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "ae670273-d1f8-43e0-9bf0-a2bbbf7d4ee6")
@@ -599,7 +605,7 @@ module.exports = {
         (width 0.15)
     )
 	(pad "19" thru_hole circle
-		(at -1.325 -8.5685)
+		(at -1.325 -8.5685 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
 		(layers "F.Cu" "F.Paste" "F.Mask")
@@ -607,7 +613,7 @@ module.exports = {
         ${p.DIO.str}
 	)
 	(pad "20" thru_hole circle
-		(at 1.215 -8.5685)
+		(at 1.215 -8.5685 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
 		(layers "F.Cu" "F.Paste" "F.Mask")
@@ -615,7 +621,7 @@ module.exports = {
         ${p.CLK.str}
 	)
 	(pad "21"  thru_hole circle
-		(at -1.325 -6.0285)
+		(at -1.325 -6.0285 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
 		(layers "F.Cu" "F.Paste" "F.Mask")
@@ -623,7 +629,7 @@ module.exports = {
         ${p.RST.str}
 	)
 	(pad "22" thru_hole circle
-		(at 1.215 -6.0285)
+		(at 1.215 -6.0285 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
 		(layers "F.Cu" "F.Paste" "F.Mask")

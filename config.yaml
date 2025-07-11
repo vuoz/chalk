@@ -1,0 +1,239 @@
+meta:
+  engine: 4.1.0
+units:
+  x: 17
+  y: 17
+  kx: cx
+  ky: cy
+  px: kx + 2
+  py: ky + 2
+points:
+  zones:
+    matrix:
+      key:
+        spread: 17
+        padding: 17
+      anchor:
+        rotate: 8
+        shift: [ 100,-100]
+      columns:
+        outer:
+          key.col_net: P4
+        pinky:
+          key.col_net: P5
+        ring:
+          key.splay: -5
+          key.origin: [-12, -19]
+          key.stagger: 12
+          key.col_net: P6
+        middle:
+          key.stagger: 5
+          key.col_net: P7
+        index:
+          key.stagger: -6
+          key.col_net: P8
+        inner:
+          key.stagger: -2
+          key.col_net: P9
+      rows:
+        bottom:
+          row_net: P19
+          mirror.row_net: P2
+        home:
+          row_net: P20
+          mirror.row_net: P0
+        top:
+          row_net: P21
+          mirror.row_net: P1
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-18, -18]
+      columns:
+        near:
+          key.col_net: P7
+        home:
+          key.spread: 17
+          key.splay: -5
+          key.origin: [-11.75, -9]
+          key.col_net: P8
+        far:
+          key.spread: 17
+          key.splay: -15
+          key.origin: [-9.5, -9]
+          key.col_net: P9
+      rows:
+        thumb:
+          row_net: P18
+          mirror.row_net: P3
+
+  rotate: -20
+  mirror:
+    ref: matrix_pinky_home
+    distance: 11kx
+outlines:
+  raw_cutouts:
+    - what: rectangle
+      where: true
+      size: [16,16]
+  keys:
+    - what: rectangle
+      where: true
+      size: [ kx-0.5,ky-0.5]
+  board_left:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outer_bottom
+          shift: [ -0.5px,-0.5py]
+        - ref: matrix_outer_top
+          shift: [-0.5px, +0.5py]
+        - ref: matrix_pinky_top
+          shift: [-0.5px,+0.5py]
+        - ref: matrix_ring_top
+          shift: [-0.5px, +0.5py]
+        - ref: matrix_middle_top
+          shift: [-0.5px, +0.5py]
+        - ref: matrix_middle_top
+          shift: [ 0.5px,0.5py]
+        - ref: matrix_index_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_index_top
+          shift: [ 1px,0.5py]
+        - ref: matrix_inner_top
+          shift: [1.5px, 0.6py]
+        - ref: thumbfan_far_thumb
+          shift: [0.51px,0.5py]
+        - ref: thumbfan_far_thumb
+          shift: [ 0.5px, -0.5py]
+        - ref: thumbfan_far_thumb
+          shift: [ -0.5px, -0.5py]
+        - ref: thumbfan_home_thumb
+          shift: [ -0.5px,-0.5py]
+        - ref: thumbfan_near_thumb
+          shift: [ -0.5px, -0.5py]
+        - ref: matrix_middle_bottom
+          shift: [-0.5px,-1.3py]
+        - ref: matrix_ring_bottom
+          shift: [-0.44px,-1.10py]
+      fillet: 2
+  board_right:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: mirror_matrix_outer_bottom
+          shift: [ -0.5px,-0.5py]
+        - ref: mirror_matrix_outer_top
+          shift: [-0.5px, +0.5py]
+        - ref: mirror_matrix_pinky_top
+          shift: [-0.5px,+0.5py]
+        - ref: mirror_matrix_ring_top
+          shift: [-0.5px, +0.5py]
+        - ref: mirror_matrix_middle_top
+          shift: [-0.5px, +0.5py]
+        - ref: mirror_matrix_middle_top
+          shift: [ 0.5px,0.5py]
+        - ref: mirror_matrix_index_top
+          shift: [0.5px,0.5py]
+        - ref: mirror_matrix_index_top
+          shift: [ 1px,0.5py]
+        - ref: mirror_matrix_inner_top
+          shift: [1.5px, 0.6py]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [0.51px,0.5py]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [ 0.5px, -0.5py]
+        - ref: mirror_thumbfan_far_thumb
+          shift: [ -0.5px, -0.5py]
+        - ref: mirror_thumbfan_home_thumb
+          shift: [ -0.5px,-0.5py]
+        - ref: mirror_thumbfan_near_thumb
+          shift: [ -0.5px, -0.5py]
+        - ref: mirror_matrix_middle_bottom
+          shift: [-0.5px,-1.3py]
+        - ref: mirror_matrix_ring_bottom
+          shift: [-0.44px,-1.10py]
+      fillet: 2
+
+  board_expand_left:                
+    - what: outline           
+      name: board_left            
+      expand: 1.5                
+      fillet: 2
+
+  board_expand_right:                
+    - what: outline           
+      name: board_right            
+      expand: 1.5                
+      fillet: 2
+
+  frontplate_left:
+    - name: board_left
+    - operation: subtract
+      name: raw_cutouts
+  frontplate_right:
+    - name: board_right
+    - operation: subtract
+      name: raw_cutouts
+pcbs:
+  main:
+    template: kicad8
+    outlines:
+      main:
+        outline: board_left
+
+    footprints:
+      pg1316_switches:
+        what: custom/pg1316s
+        where: true
+        params:
+          from: "{{col_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: ceoloide/diode_tht_sod123
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          side: "F"
+          include_traces_vias: true
+          reversible: true
+        adjust: 
+          shift: [ 0,2.7]
+      nice_nano:
+        what: custom/xiao_nRF52840
+        params:
+          #side: "B"
+        where:
+          ref.aggregate.parts: [ matrix_inner_top, mirror_matrix_inner_top]
+          shift: [ 0,0]
+          rotate: 0
+      reset:
+        what: ceoloide/reset_switch_tht_top
+        params:
+          from: GND
+          to: RST
+        where:
+          ref.aggregate.parts: [ matrix_inner_bottom, mirror_matrix_inner_bottom]
+          shift: [ 0,-1]
+          rotate: -90
+      battery:
+        what: ceoloide/battery_connector_jst_ph_2
+        params:
+          side: "F"
+          BAT_P: BAT_P
+          BAT_N: GND
+        where:
+          ref.aggregate.parts: [ matrix_inner_bottom, mirror_matrix_inner_bottom]
+          shift: [ -1,-1]
+          rotate: 0
+      power:
+        what: ceoloide/power_switch_smd_side
+        params:
+          from: BAT_P
+          to: RAW
+        where:
+          ref.aggregate.parts: [ matrix_inner_top, mirror_matrix_inner_top]
+          shift: [ 1,0]
+          rotate: 0
+

@@ -12,10 +12,13 @@ module.exports = {
         P9: { type: 'net', value: 'P9' },
         P10: { type: 'net', value: 'P10' },
         VCC33: { type: 'net', value: 'VCC33' },
+        VCC5: { type: 'net', value: 'VCC5' },
         GND: { type: 'net', value: 'GND' },
         RST: { type: 'net', value: 'RST' },
-        BAT_P: { type: 'net', value: 'BAT_P' },
-        BAT_M: { type: 'net', value: 'BAT_M' }
+        RAW: { type: 'net', value: 'RAW' },
+        GND: { type: 'net', value: 'GND' },
+        DIO: { type: 'net', value: 'DIO' },
+        CLK: { type: 'net', value: 'CLK' },
     },
     body: p => {
         return `(footprint "XIAO-nRF52840-SMD"
@@ -286,6 +289,7 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "c68f6b12-dcf5-46b1-b159-2eef9023b0ac")
+        ${p.P0.str}
 	)
 	(pad "2" smd roundrect
 		(at -8.11 -5.08)
@@ -295,6 +299,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "525b09fc-9099-4274-98c3-45f84d0591ab")
+
+        ${p.P1.str}
 	)
 	(pad "3" smd roundrect
 		(at -8.11 -2.54)
@@ -304,6 +310,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "99cc76a7-0a78-4868-871b-c214ecac5525")
+
+        ${p.P2.str}
 	)
 	(pad "4" smd roundrect
 		(at -8.11 0)
@@ -313,6 +321,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "8038b67b-b3bf-4a3e-b790-40857963c957")
+
+        ${p.P3.str}
 	)
 	(pad "5" smd roundrect
 		(at -8.11 2.54)
@@ -322,6 +332,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "84711cb2-d222-464e-bcd5-f76af75cc612")
+
+        ${p.P4.str}
 	)
 	(pad "6" smd roundrect
 		(at -8.11 5.08)
@@ -331,6 +343,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "aabcfc3b-fa72-4e48-95d1-d53474158cc0")
+
+        ${p.P5.str}
 	)
 	(pad "7" smd roundrect
 		(at -8.11 7.62)
@@ -340,6 +354,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "3e086061-1f3f-4b1e-9354-920126d40249")
+
+        ${p.P6.str}
 	)
 	(pad "8" smd roundrect
 		(at 8.055 7.62)
@@ -349,6 +365,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "974a7e29-b5d3-475c-b481-2bc14f5b3495")
+
+        ${p.P7.str}
 	)
 	(pad "9" smd roundrect
 		(at 8.055 5.08)
@@ -358,6 +376,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "a553cc0b-22bc-49aa-9fb7-680c812e8abd")
+
+        ${p.P8.str}
 	)
 	(pad "10" smd roundrect
 		(at 8.055 2.54)
@@ -367,6 +387,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "b650936d-c436-4d93-abb7-7957add5cfb1")
+
+        ${p.P9.str}
 	)
 	(pad "11" smd roundrect
 		(at 8.055 0)
@@ -376,6 +398,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "177728f1-7b02-41a6-9de4-bdaee546f6d9")
+
+        ${p.P10.str}
 	)
 	(pad "12" smd roundrect
 		(at 8.055 -2.54)
@@ -385,6 +409,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "eb6539ef-4d84-4ae5-bc4e-237dae21b9ef")
+
+        ${p.VCC33.str}
 	)
 	(pad "13" smd roundrect
 		(at 8.055 -5.08)
@@ -394,6 +420,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "c8744fbe-93c9-4c54-84bc-435357de679f")
+
+        ${p.GND.str}
 	)
 	(pad "14" smd roundrect
 		(at 8.055 -7.62)
@@ -403,6 +431,8 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "fd579d63-bbef-4609-9252-aad3f944a314")
+
+        ${p.VCC5.str}
 	)
 	(pad "15" smd roundrect
 		(at -4.5 -0.3135 180)
@@ -412,6 +442,7 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "144d3c3d-6207-433c-9e61-4f75722af865")
+        ${p.RAW.str}
 	)
 	(pad "16" smd roundrect
 		(at -4.5 -2.2185 180)
@@ -421,6 +452,7 @@ module.exports = {
 		(solder_mask_margin 0.0508)
 		(thermal_bridge_angle 45)
 		(uuid "3780a4ef-348c-4241-b04b-2cb4f7127fa2")
+        ${p.GND.str}
 	)
 	(pad "17" smd roundrect
 		(at 3.755 9.2369 270)
@@ -445,24 +477,28 @@ module.exports = {
 		(size 1.7 1.7)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "ad890579-1e55-4b71-9d59-080a59598896")
+        ${p.DIO.str}
 	)
 	(pad "20" smd circle
 		(at 1.215 -8.5685)
 		(size 1.7 1.7)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "22959b7c-559b-4b72-b2a4-a0d26b3295b4")
+        ${p.CLK.str}
 	)
 	(pad "21" smd circle
 		(at -1.325 -6.0285)
 		(size 1.7 1.7)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "b41f05b6-c247-4448-ade6-b9856922e9c3")
+        ${p.RST.str}
 	)
 	(pad "22" smd circle
 		(at 1.215 -6.0285)
 		(size 1.7 1.7)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "f7daaee5-3d37-4977-8c14-d58689c2eaf6")
+        ${p.GND.str}
 	)
 )`
 

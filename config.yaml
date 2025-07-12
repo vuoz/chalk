@@ -19,34 +19,37 @@ points:
       columns:
         outer:
           key.col_net: P4
+          key.mirror.col_net: P9
         pinky:
           key.col_net: P5
+          key.mirror.col_net: P8
         ring:
           key.splay: -5
           key.origin: [-12, -19]
           key.stagger: 12
           key.col_net: P6
+          key.mirror.col_net: P7
         middle:
           key.splay: -4
           key.spread: 18
           key.stagger: 5
           key.col_net: P7
+          key.mirror.col_net: P6
         index:
           key.stagger: -6
           key.col_net: P8
+          key.mirror.col_net: P5
         inner:
           key.stagger: -2
           key.col_net: P9
+          key.mirror.col_net: P4
       rows:
         bottom:
           row_net: P2
-          mirror.row_net: P2
         home:
           row_net: P1
-          mirror.row_net: P1
         top:
           row_net: P0
-          mirror.row_net: P0
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -67,7 +70,6 @@ points:
       rows:
         thumb:
           row_net: P3
-          mirror.row_net: P3
 
   rotate: -20
   mirror:

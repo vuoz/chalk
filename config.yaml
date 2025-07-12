@@ -37,14 +37,14 @@ points:
           key.col_net: P9
       rows:
         bottom:
-          row_net: P19
+          row_net: P2
           mirror.row_net: P2
         home:
-          row_net: P20
-          mirror.row_net: P0
-        top:
-          row_net: P21
+          row_net: P1
           mirror.row_net: P1
+        top:
+          row_net: P0
+          mirror.row_net: P0
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -64,7 +64,7 @@ points:
           key.col_net: P9
       rows:
         thumb:
-          row_net: P18
+          row_net: P3
           mirror.row_net: P3
 
   rotate: -20
@@ -207,15 +207,18 @@ pcbs:
         asym: source
         where:
           - ref: matrix_inner_top
-          - shift: [-2.5, 2.5]
-
-
+          - shift: [20, -2.5]
       reset:
         asym: source
         what: ceoloide/reset_switch_tht_top
         params:
           from: GND
           to: RST
+        where:
+          - ref: matrix_inner_top
+          - shift: [20, -10]
+
+
       battery:
         asym: source
         what: ceoloide/battery_connector_jst_ph_2
@@ -223,12 +226,21 @@ pcbs:
           side: "F"
           BAT_P: BAT_P
           BAT_N: GND
+        where:
+          - ref: matrix_inner_top
+          - shift: [20, -12]
+
       power:
         what: ceoloide/power_switch_smd_side
         asym: source
         params:
           from: BAT_P
           to: RAW
+        where:
+          - ref: matrix_inner_top
+          - shift: [20, -13]
+
+
 
   right:
     template: kicad8

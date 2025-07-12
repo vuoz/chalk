@@ -558,11 +558,18 @@ module.exports = {
 		(uuid "6b725fd4-d6f0-46bf-b3e0-7ec07cc05622")
         ${p.VCC5.str}
 	)
+(fp_line (start -2.0000  0.6000) (end -5.0000  0.6000) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -5.0000  0.6000) (end -5.0000  0.1365) (layer "Edge.Cuts") (width 0.15))
 
-    (fp_line (start -5 0.6) (end  -2 0.6) (layer "Edge.Cuts") (width 0.15))
-    (fp_line (start -5 -3.1) (end  -2 -3.1) (layer "Edge.Cuts") (width 0.15))
-    (fp_line (start -5 0.6) (end  -5 -3.1) (layer "Edge.Cuts") (width 0.15))
-    (fp_line (start -2 0.6) (end  -2 -3.1) (layer "Edge.Cuts") (width 0.15))
+(fp_arc  (start -5.0000  0.1365) (mid -4.5500 -0.3135) (end -5.0000 -0.7635) (layer "Edge.Cuts") (width 0.15))
+
+(fp_line (start -5.0000 -0.7635) (end -5.0000 -1.7685) (layer "Edge.Cuts") (width 0.15))
+
+(fp_arc  (start -5.0000 -1.7685) (mid -4.5500 -2.2185) (end -5.0000 -2.6685) (layer "Edge.Cuts") (width 0.15))
+
+(fp_line (start -5.0000 -2.6685) (end -5.0000 -3.1000) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -5.0000 -3.1000) (end -2.0000 -3.1000) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -2.0000 -3.1000) (end -2.0000  0.6000) (layer "Edge.Cuts") (width 0.15))
 
     (pad "15" thru_hole circle
 		(at -5 -0.3135 ${getRotation(p.rot + 180)} )
@@ -597,13 +604,16 @@ module.exports = {
 		(thermal_bridge_angle 45)
 		(uuid "ae670273-d1f8-43e0-9bf0-a2bbbf7d4ee6")
 	)
+(fp_arc  (start -1.325 -5.5785) (mid -0.875 -6.0285) (end -1.325 -6.4785) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -1.325 -6.4785) (end -1.325 -8.1185) (layer "Edge.Cuts") (width 0.15))
+(fp_arc  (start -1.325 -8.1185) (mid -0.875 -8.5685) (end -1.325 -9.0185) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -1.325 -9.0185) (end  1.215 -9.0185) (layer "Edge.Cuts") (width 0.15))
+(fp_arc  (start  1.215 -9.0185) (mid  0.765 -8.5685) (end  1.215 -8.1185) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start  1.215 -8.1185) (end  1.215 -6.4785) (layer "Edge.Cuts") (width 0.15))
+(fp_arc  (start  1.215 -6.4785) (mid  0.765 -6.0285) (end  1.215 -5.5785) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start  1.215 -5.5785) (end -1.325 -5.5785) (layer "Edge.Cuts") (width 0.15))
 
-    (fp_circle
-        (center -0.05 -7.3)
-        (end    -2 -7.3)      
-        (layer "Edge.Cuts")
-        (width 0.15)
-    )
+    
 	(pad "19" thru_hole circle
 		(at -1.325 -8.5685 ${p.rot} )
 		(size 1.7 1.7)
@@ -636,9 +646,7 @@ module.exports = {
 		(uuid "f7daaee5-3d37-4977-8c14-d58689c2eaf6")
         ${p.GND.str}
 	)
-
-
-)`
+    )`
 
     }
 }

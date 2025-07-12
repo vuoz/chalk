@@ -27,6 +27,8 @@ points:
           key.stagger: 12
           key.col_net: P6
         middle:
+          key.splay: -4
+          key.spread: 18
           key.stagger: 5
           key.col_net: P7
         index:
@@ -231,8 +233,6 @@ pcbs:
           - ref: matrix_index_top
           - shift: [-2,0.62py]
           - rotate: 71
-
-
 
   right:
     template: kicad8

@@ -100,8 +100,8 @@ outlines:
           shift: [0.5px,0.5py]
         - ref: matrix_index_top
           shift: [ 1px,0.5py]
-        - ref: matrix_inner_top
-          shift: [1.5px, 0.6py]
+        - ref: matrix_index_top
+          shift: [2.412px, 0.5py]
         - ref: thumbfan_far_thumb
           shift: [0.51px,0.5py]
         - ref: thumbfan_far_thumb
@@ -137,8 +137,8 @@ outlines:
           shift: [0.5px,0.5py]
         - ref: mirror_matrix_index_top
           shift: [ 1px,0.5py]
-        - ref: mirror_matrix_inner_top
-          shift: [1.5px, 0.6py]
+        - ref: mirror_matrix_index_top
+          shift: [2.412px, 0.5py]
         - ref: mirror_thumbfan_far_thumb
           shift: [0.51px,0.5py]
         - ref: mirror_thumbfan_far_thumb
@@ -181,19 +181,16 @@ pcbs:
     outlines:
       main:
         outline: board_left
-
     footprints:
       pg1316_switches:
         what: custom/pg1316s
-        asym: source
-        where: true
+        where: /^(matrix|thumbfan)_/
         params:
           from: "{{col_net}}"
           to: "{{colrow}}"
       diode:
         what: ceoloide/diode_tht_sod123
-        where: true
-        asym: source
+        where: /^(matrix|thumbfan)_/
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
@@ -204,23 +201,19 @@ pcbs:
           shift: [ 0,2.7]
       mcu:
         what: custom/xiao_nRF52840
-        asym: source
         where:
           - ref: matrix_inner_top
-          - shift: [20, -2.5]
+          - shift: [20, 0.7]
       reset:
-        asym: source
         what: ceoloide/reset_switch_tht_top
         params:
           from: GND
           to: RST
         where:
-          - ref: matrix_inner_top
-          - shift: [20, -10]
-
-
+          - ref: matrix_pinky_top
+          - shift: [5.7, 0.7py]
+          - rotate: 30
       battery:
-        asym: source
         what: ceoloide/battery_connector_jst_ph_2
         params:
           side: "F"
@@ -228,17 +221,16 @@ pcbs:
           BAT_N: GND
         where:
           - ref: matrix_inner_top
-          - shift: [20, -12]
-
+          - shift: [0.7px, -0.6py]
       power:
         what: ceoloide/power_switch_smd_side
-        asym: source
         params:
           from: BAT_P
           to: RAW
         where:
-          - ref: matrix_inner_top
-          - shift: [20, -13]
+          - ref: matrix_index_top
+          - shift: [-2,0.62py]
+          - rotate: 71
 
 
 
@@ -247,19 +239,16 @@ pcbs:
     outlines:
       main:
         outline: board_right
-
     footprints:
       pg1316_switches:
         what: custom/pg1316s
-        asym: clone
-        where: true
+        where: /^mirror_(matrix|thumbfan)_/
         params:
           from: "{{col_net}}"
           to: "{{colrow}}"
       diode:
         what: ceoloide/diode_tht_sod123
-        where: true
-        asym: clone
+        where: /^mirror_(matrix|thumbfan)_/
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
@@ -270,31 +259,35 @@ pcbs:
           shift: [ 0,2.7]
       mcu:
         what: custom/xiao_nRF52840
-        asym: clone
         where:
-          - ref: matrix_inner_top
-          - shift: [-2.5, 2.5]
-
+          - ref: mirror_matrix_inner_top
+          - shift: [20, 0.7]
       reset:
-        asym: clone
         what: ceoloide/reset_switch_tht_top
         params:
           from: GND
           to: RST
-
+        where:
+          - ref: mirror_matrix_pinky_top
+          - shift: [5.7, 0.7py]
+          - rotate: 30
       battery:
-        asym: clone
         what: ceoloide/battery_connector_jst_ph_2
         params:
           side: "F"
           BAT_P: BAT_P
           BAT_N: GND
-
+        where:
+          - ref: mirror_matrix_inner_top
+          - shift: [0.7px, -0.6py]
       power:
         what: ceoloide/power_switch_smd_side
-        asym: clone
         params:
           from: BAT_P
           to: RAW
+        where:
+          - ref: mirror_matrix_index_top
+          - shift: [-2, 0.62py]
+          - rotate: 251
 
 

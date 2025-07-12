@@ -203,6 +203,8 @@ pcbs:
           shift: [ 0,2.7]
       mcu:
         what: custom/xiao_nRF52840
+        params:
+          NFCPADS: false
         where:
           - ref: matrix_inner_top
           - shift: [20, 0.7]
@@ -214,7 +216,7 @@ pcbs:
         where:
           - ref: matrix_pinky_top
           - shift: [5.7, 0.7py]
-          - rotate: 30
+          - rotate: 28
       battery:
         what: ceoloide/battery_connector_jst_ph_2
         params:
@@ -259,6 +261,8 @@ pcbs:
           shift: [ 0,2.7]
       mcu:
         what: custom/xiao_nRF52840
+        params:
+          NFCPADS: false
         where:
           - ref: mirror_matrix_inner_top
           - shift: [20, 0.7]
@@ -270,7 +274,7 @@ pcbs:
         where:
           - ref: mirror_matrix_pinky_top
           - shift: [5.7, 0.7py]
-          - rotate: 30
+          - rotate: 28
       battery:
         what: ceoloide/battery_connector_jst_ph_2
         params:

@@ -19,6 +19,9 @@ module.exports = {
         GND: { type: 'net', value: 'GND' },
         DIO: { type: 'net', value: 'DIO' },
         CLK: { type: 'net', value: 'CLK' },
+        NFCPADS: false,
+        NFC1: { type: 'net', value: 'NFC1' },
+        NFC2: { type: 'net', value: 'NFC2' },
     },
     body: p => {
         function getRotation(rot) {
@@ -29,7 +32,10 @@ module.exports = {
         }
 
 
-        return `(footprint "XIAO-nRF52840-SMD"
+
+
+        var content = `
+footprint "XIAO-nRF52840-SMD"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
@@ -587,23 +593,7 @@ module.exports = {
         (uuid e683fc44-0b06-4166-aece-8ad56167ede3 )
         ${p.GND.str}
     )
-	(pad "17" smd roundrect
-		(at 3.755 9.2369 ${getRotation(p.rot + 270)} )
-		(size 2.5 1.1)
-		(layers "F.Cu" "F.Paste" "F.Mask")
-		(roundrect_rratio 0.25)
-		(solder_mask_margin 0.0508)
-		(thermal_bridge_angle 45)
-		(uuid "912f339b-da23-4429-b096-f30b25320685")
-	)
-	(pad "18" smd roundrect
-		(at 5.66 9.2369 ${getRotation(p.rot + 270)} )
-		(size 2.5 1.1)
-		(layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
-		(solder_mask_margin 0.0508)
-		(thermal_bridge_angle 45)
-		(uuid "ae670273-d1f8-43e0-9bf0-a2bbbf7d4ee6")
-	)
+
 (fp_arc  (start -1.325 -5.5785) (mid -0.875 -6.0285) (end -1.325 -6.4785) (layer "Edge.Cuts") (width 0.15))
 (fp_line (start -1.325 -6.4785) (end -1.325 -8.1185) (layer "Edge.Cuts") (width 0.15))
 (fp_arc  (start -1.325 -8.1185) (mid -0.875 -8.5685) (end -1.325 -9.0185) (layer "Edge.Cuts") (width 0.15))
@@ -646,7 +636,33 @@ module.exports = {
 		(uuid "f7daaee5-3d37-4977-8c14-d58689c2eaf6")
         ${p.GND.str}
 	)
-    )`
+    `
+        if (p.NFCPADS) {
+            content = `${content}
+            (pad "17" smd roundrect
+		    (at 3.755 9.2369 ${getRotation(p.rot + 270)} )
+		    (size 2.5 1.1)
+		    (layers "F.Cu" "F.Paste" "F.Mask")
+		    (roundrect_rratio 0.25)
+		    (solder_mask_margin 0.0508)
+		    (thermal_bridge_angle 45)
+		    (uuid "912f339b-da23-4429-b096-f30b25320685")
+            ${p.NFC1.str}
+	       )
+	    (pad "18" smd roundrect
+		    (at 5.66 9.2369 ${getRotation(p.rot + 270)} )
+		    (size 2.5 1.1)
+		    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
+		    (solder_mask_margin 0.0508)
+		    (thermal_bridge_angle 45)
+		    (uuid "ae670273-d1f8-43e0-9bf0-a2bbbf7d4ee6")
+            ${p.NFC2.str}
+	    ) 
+        `
+        }
+        return `( ${content} )`
+
+
 
     }
 }

@@ -57,16 +57,19 @@ points:
       columns:
         near:
           key.col_net: P7
+          key.mirror.col_net: P6
         home:
           key.spread: 17
           key.splay: -5
           key.origin: [-11.75, -9]
           key.col_net: P8
+          key.mirror.col_net: P5
         far:
           key.spread: 17
           key.splay: -15
           key.origin: [-9.5, -9]
           key.col_net: P9
+          key.mirror.col_net: P4
       rows:
         thumb:
           row_net: P3

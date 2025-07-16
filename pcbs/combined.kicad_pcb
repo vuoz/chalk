@@ -1257,7 +1257,7 @@
 			)
 		)
 		(property "Footprint" "Custom:CPG1316S01D02_mikeholscher"
-			(at 0 10.85001 21)
+			(at 0.000001 10.85001 21)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -1298,7 +1298,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.150001) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
+				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.15) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
 				(xy 2.199999 -3.900003) (xy 2.199999 -3.5)
 			)
 			(stroke
@@ -1413,14 +1413,14 @@
 			(uuid "f6054864-f1a4-4f38-be2c-3acf14d9a3ee")
 		)
 		(pad "3" smd rect
-			(at -6.349997 5.999997 9)
+			(at -6.349997 5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
 			(uuid "147d3434-0e45-4674-8b14-d45bc57ac03a")
 		)
 		(pad "3" smd rect
-			(at 6.349997 -5.999997 9)
+			(at 6.349997 -5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
@@ -2808,7 +2808,7 @@
 		)
 		(fp_arc
 			(start 1.5 0.500002)
-			(mid 0.999997 0.000001)
+			(mid 0.999998 0)
 			(end 1.5 -0.5)
 			(stroke
 				(width 0.1)
@@ -4998,7 +4998,7 @@
 		(attr through_hole)
 		(fp_arc
 			(start -1.5 -0.500001)
-			(mid -0.999999 0)
+			(mid -0.999999 -0.000001)
 			(end -1.5 0.5)
 			(stroke
 				(width 0.1)
@@ -8419,7 +8419,7 @@
 			)
 		)
 		(property "Footprint" "Custom:CPG1316S01D02_mikeholscher"
-			(at 0 10.85001 21)
+			(at 0.000001 10.85001 21)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -8460,7 +8460,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.150001) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
+				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.15) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
 				(xy 2.199999 -3.900003) (xy 2.199999 -3.5)
 			)
 			(stroke
@@ -8575,14 +8575,14 @@
 			(uuid "e312cf65-691b-4c88-9647-c49e7179fa47")
 		)
 		(pad "3" smd rect
-			(at -6.349997 5.999997 9)
+			(at -6.349997 5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
 			(uuid "683f6387-90aa-4353-9dee-17bc5b8a40ef")
 		)
 		(pad "3" smd rect
-			(at 6.349997 -5.999997 9)
+			(at 6.349997 -5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
@@ -12252,7 +12252,7 @@
 			)
 		)
 		(property "Footprint" "Custom:CPG1316S01D02_mikeholscher"
-			(at 0 10.85001 21)
+			(at 0.000001 10.85001 21)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -12293,7 +12293,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.150001) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
+				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.15) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
 				(xy 2.199999 -3.900003) (xy 2.199999 -3.5)
 			)
 			(stroke
@@ -12408,14 +12408,14 @@
 			(uuid "577c5c8d-64e0-4d86-82e8-3ff4c1bdc664")
 		)
 		(pad "3" smd rect
-			(at -6.349997 5.999997 9)
+			(at -6.349997 5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
 			(uuid "09609e26-340e-4236-83e5-b902cc0f3a9b")
 		)
 		(pad "3" smd rect
-			(at 6.349997 -5.999997 9)
+			(at 6.349997 -5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
@@ -13077,7 +13077,7 @@
 		)
 		(fp_arc
 			(start 6.929998 -10.537001)
-			(mid 8.27702 -9.979025)
+			(mid 8.27702 -9.979023)
 			(end 8.835 -8.632002)
 			(stroke
 				(width 0.1)
@@ -13232,7 +13232,7 @@
 		)
 		(fp_arc
 			(start -4.999996 -0.763502)
-			(mid -4.550007 -0.313495)
+			(mid -4.550009 -0.313495)
 			(end -5.000003 0.136505)
 			(stroke
 				(width 0.15)
@@ -13243,7 +13243,7 @@
 		)
 		(fp_arc
 			(start -1.325001 -6.478501)
-			(mid -0.874998 -6.028501)
+			(mid -0.874998 -6.028502)
 			(end -1.324997 -5.5785)
 			(stroke
 				(width 0.15)
@@ -13254,7 +13254,7 @@
 		)
 		(fp_arc
 			(start -1.325 -9.018501)
-			(mid -0.874997 -8.568503)
+			(mid -0.874998 -8.568504)
 			(end -1.324996 -8.118502)
 			(stroke
 				(width 0.15)
@@ -15567,28 +15567,28 @@
 			(uuid "1bd4cdea-4cf9-417a-ac2c-f3370e26416e")
 		)
 		(pad "1" smd rect
-			(at -1.649995 0.000001 20)
+			(at -1.649995 0 20)
 			(size 0.9 1.2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(net 31 "P3")
 			(uuid "3650e809-f447-4643-aa15-ab938ff2e6a2")
 		)
 		(pad "1" smd rect
-			(at -1.649995 0.000001 20)
+			(at -1.649995 0 20)
 			(size 0.9 1.2)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(net 31 "P3")
 			(uuid "c0d6a0c5-799f-4c9d-a6e2-4ada6e667bea")
 		)
 		(pad "2" smd rect
-			(at 1.649995 -0.000001 20)
+			(at 1.649995 0 20)
 			(size 0.9 1.2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(net 61 "mirror_far_thumb")
 			(uuid "a9dc3425-4675-4401-b4f4-cce69b0730c8")
 		)
 		(pad "2" smd rect
-			(at 1.649995 -0.000001 20)
+			(at 1.649995 0 20)
 			(size 0.9 1.2)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(net 61 "mirror_far_thumb")
@@ -16569,7 +16569,7 @@
 			)
 		)
 		(property "Footprint" "Custom:CPG1316S01D02_mikeholscher"
-			(at 0 10.85001 21)
+			(at 0.000001 10.85001 21)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -16610,7 +16610,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.150001) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
+				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.15) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
 				(xy 2.199999 -3.900003) (xy 2.199999 -3.5)
 			)
 			(stroke
@@ -16725,14 +16725,14 @@
 			(uuid "ffc9fad4-5c27-46f4-830d-eeee9f60c6ae")
 		)
 		(pad "3" smd rect
-			(at -6.349997 5.999997 9)
+			(at -6.349997 5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
 			(uuid "4b6f9c72-73b3-471a-89e9-4fce3ee11e05")
 		)
 		(pad "3" smd rect
-			(at 6.349997 -5.999997 9)
+			(at 6.349997 -5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
@@ -16777,7 +16777,7 @@
 			)
 		)
 		(property "Footprint" "Custom:CPG1316S01D02_mikeholscher"
-			(at 0 10.85001 21)
+			(at 0.000001 10.85001 21)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -16818,7 +16818,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.150001) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
+				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.15) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
 				(xy 2.199999 -3.900003) (xy 2.199999 -3.5)
 			)
 			(stroke
@@ -16933,14 +16933,14 @@
 			(uuid "b47fe8d9-e428-408c-9e05-2bb87d0a1ec9")
 		)
 		(pad "3" smd rect
-			(at -6.349997 5.999997 9)
+			(at -6.349997 5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
 			(uuid "c2ce594f-362b-4457-b406-fd5fffe48f25")
 		)
 		(pad "3" smd rect
-			(at 6.349997 -5.999997 9)
+			(at 6.349997 -5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
@@ -17292,7 +17292,7 @@
 		)
 		(fp_arc
 			(start 6.930001 -10.537004)
-			(mid 8.277025 -9.979031)
+			(mid 8.277024 -9.979031)
 			(end 8.835 -8.632006)
 			(stroke
 				(width 0.1)
@@ -17436,7 +17436,7 @@
 		)
 		(fp_arc
 			(start -5.000003 -2.668498)
-			(mid -4.550001 -2.218501)
+			(mid -4.550002 -2.218501)
 			(end -4.999998 -1.768499)
 			(stroke
 				(width 0.15)
@@ -17447,7 +17447,7 @@
 		)
 		(fp_arc
 			(start -4.999999 -0.763498)
-			(mid -4.550007 -0.313493)
+			(mid -4.550009 -0.313493)
 			(end -5.000003 0.136509)
 			(stroke
 				(width 0.15)
@@ -17458,7 +17458,7 @@
 		)
 		(fp_arc
 			(start -1.324998 -9.018503)
-			(mid -0.874991 -8.568499)
+			(mid -0.874993 -8.5685)
 			(end -1.324998 -8.118496)
 			(stroke
 				(width 0.15)
@@ -17469,7 +17469,7 @@
 		)
 		(fp_arc
 			(start -1.324997 -6.4785)
-			(mid -0.875007 -6.028495)
+			(mid -0.875009 -6.028495)
 			(end -1.325007 -5.578499)
 			(stroke
 				(width 0.15)
@@ -17480,7 +17480,7 @@
 		)
 		(fp_arc
 			(start 1.214996 -8.118497)
-			(mid 0.765007 -8.5685)
+			(mid 0.765009 -8.568499)
 			(end 1.215002 -9.018496)
 			(stroke
 				(width 0.15)
@@ -17491,7 +17491,7 @@
 		)
 		(fp_arc
 			(start 1.214999 -5.578504)
-			(mid 0.765005 -6.028502)
+			(mid 0.765005 -6.028501)
 			(end 1.214998 -6.4785)
 			(stroke
 				(width 0.15)
@@ -18188,7 +18188,7 @@
 			(uuid "1f672eb5-e576-4801-bf13-894bef0a4be8")
 		)
 		(fp_line
-			(start 0.250001 -0.000002)
+			(start 0.250001 -0.000003)
 			(end 0.750002 0.000001)
 			(stroke
 				(width 0.1)
@@ -18258,7 +18258,7 @@
 			(uuid "7e419170-1eae-4f2f-aebb-c76288b55780")
 		)
 		(fp_line
-			(start 0.250001 -0.000002)
+			(start 0.250001 -0.000003)
 			(end 0.750002 0.000001)
 			(stroke
 				(width 0.1)
@@ -20624,7 +20624,7 @@
 			)
 		)
 		(property "Footprint" "Custom:CPG1316S01D02_mikeholscher"
-			(at 0 10.85001 21)
+			(at 0.000001 10.85001 21)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -20665,7 +20665,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.150001) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
+				(xy 3.800004 -3.5) (xy 3.8 -1.650005) (xy 3.300001 -1.15) (xy -2.199998 -1.149992) (xy -2.200003 -3.899998)
 				(xy 2.199999 -3.900003) (xy 2.199999 -3.5)
 			)
 			(stroke
@@ -20780,14 +20780,14 @@
 			(uuid "47ba402e-5b7d-400f-8e13-4799b69e4cde")
 		)
 		(pad "3" smd rect
-			(at -6.349997 5.999997 9)
+			(at -6.349997 5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
 			(uuid "53774d2f-2d6b-4243-a5f5-f309e87bf05e")
 		)
 		(pad "3" smd rect
-			(at 6.349997 -5.999997 9)
+			(at 6.349997 -5.999996 9)
 			(size 2 2)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(thermal_bridge_angle 45)
@@ -20879,7 +20879,7 @@
 		)
 		(fp_arc
 			(start 1.5 0.500002)
-			(mid 0.999997 0.000001)
+			(mid 0.999998 0)
 			(end 1.5 -0.5)
 			(stroke
 				(width 0.1)
@@ -21924,7 +21924,7 @@
 		(attr through_hole)
 		(fp_arc
 			(start -1.5 -0.500001)
-			(mid -0.999999 0)
+			(mid -0.999999 -0.000001)
 			(end -1.5 0.5)
 			(stroke
 				(width 0.1)
@@ -22081,7 +22081,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.800001 -3.500002) (xy 3.800002 -1.650001) (xy 3.300002 -1.15) (xy -2.200004 -1.149995) (xy -2.200002 -3.9)
+				(xy 3.800001 -3.500002) (xy 3.800002 -1.650001) (xy 3.300002 -1.15) (xy -2.200004 -1.149995) (xy -2.200002 -3.900002)
 				(xy 2.199999 -3.900002) (xy 2.2 -3.500002)
 			)
 			(stroke

@@ -581,7 +581,7 @@ footprint "XIAO-nRF52840-SMD"
 		(at -5 -0.3135 ${getRotation(p.rot + 180)} )
         (size 1.5 1.5)
         (drill 1.0)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "*.Cu"  "*.Mask")
         (uuid e683fc44-0b06-4166-aece-8ad56167ede3 )
         ${p.RAW.str}
     )
@@ -589,7 +589,7 @@ footprint "XIAO-nRF52840-SMD"
 		(at -5 -2.2185 ${getRotation(p.rot + 180)} )
         (size 1.5 1.5)
         (drill 1.0)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "*.Cu" "*.Mask")
         (uuid e683fc44-0b06-4166-aece-8ad56167ede3 )
         ${p.GND.str}
     )
@@ -608,7 +608,7 @@ footprint "XIAO-nRF52840-SMD"
 		(at -1.325 -8.5685 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "*.Cu"  "*.Mask")
 		(uuid "ad890579-1e55-4b71-9d59-080a59598896")
         ${p.DIO.str}
 	)
@@ -616,7 +616,7 @@ footprint "XIAO-nRF52840-SMD"
 		(at 1.215 -8.5685 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "*.Cu" "*.Mask")
 		(uuid "22959b7c-559b-4b72-b2a4-a0d26b3295b4")
         ${p.CLK.str}
 	)
@@ -624,7 +624,7 @@ footprint "XIAO-nRF52840-SMD"
 		(at -1.325 -6.0285 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "*.Cu"  "*.Mask")
 		(uuid "b41f05b6-c247-4448-ade6-b9856922e9c3")
         ${p.RST.str}
 	)
@@ -632,7 +632,7 @@ footprint "XIAO-nRF52840-SMD"
 		(at 1.215 -6.0285 ${p.rot} )
 		(size 1.7 1.7)
         (drill 1.0)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "*.Cu"  "*.Mask")
 		(uuid "f7daaee5-3d37-4977-8c14-d58689c2eaf6")
         ${p.GND.str}
 	)

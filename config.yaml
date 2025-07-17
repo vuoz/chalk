@@ -162,6 +162,17 @@ outlines:
           shift: [-0.44px,-1.10py]
       fillet: 2
 
+  board_retract_left:
+    - what: outline           
+      name: board_left            
+      expand: -1                
+      fillet: 2
+
+  board_retract_right:
+    - what: outline           
+      name: board_right            
+      expand: -1        
+      fillet: 2
   board_expand_left:                
     - what: outline           
       name: board_left            

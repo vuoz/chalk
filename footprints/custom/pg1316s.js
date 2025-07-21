@@ -70,7 +70,7 @@ module.exports = {
                        (fp_rect (start -6.75 -6.5) (end 6.75 6.5)
                          (stroke (width 0.1) (type default)) (fill none) (layer "${p.side}.Fab")(uuid "e4d1daaa-fd44-4463-b94c-0aa1f91f701d"))
 
-                     (pad "1" smd rect (at -2.5 2.65 ${p.r}) (size 1.55 2) (layers "F.Cu" "F.Paste" "F.Mask")
+                     (pad "1" smd rect (at -1.5 2.65 ${p.r}) (size 1.55 2) (layers "F.Cu" "F.Paste" "F.Mask")
                          (thermal_bridge_angle 45)
                      (uuid "b16ef624-f803-4629-b8d3-ee13895d7e96")
                         ${p.from.str}
@@ -81,7 +81,7 @@ module.exports = {
                         ${p.to.str}
 
                        )
-                     (pad "1" smd rect (at -2.5 2.65 ${p.r}) (size 1.55 2) (layers "B.Cu" "B.Paste" "B.Mask")
+                     (pad "1" smd rect (at -1.5 2.65 ${p.r}) (size 1.55 2) (layers "B.Cu" "B.Paste" "B.Mask")
                          (thermal_bridge_angle 45)
                      (uuid "b1249666-285a-44ec-9b33-d1d36fc52e05")
                         ${p.from.str}
@@ -94,7 +94,7 @@ module.exports = {
                        )
                        (pad "1" thru_hole circle
                             ${p.from.str}
-                            (at -2.5 2.65 ${p.r})
+                            (at -1.5 2.65 ${p.r})
                             (size 1.4 1.4)         
                             (drill 1)
                             (layers "*.Cu" "*.Mask")  

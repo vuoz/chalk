@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "8.0")
 	(general
-		(thickness 1.6)
+		(thickness 1)
 		(legacy_teardrops no)
 	)
 	(paper "A3")
@@ -36,6 +36,45 @@
 		(49 "F.Fab" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 0.91)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0.05)
 		(allow_soldermask_bridges_in_footprints no)
 		(grid_origin 249.17 53.26)
@@ -2313,6 +2352,107 @@
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(net 47 "mirror_ring_bottom")
 			(uuid "398639ee-f026-4e98-988a-d4c26d053e4c")
+		)
+	)
+	(footprint "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+		(layer "F.Cu")
+		(uuid "182c5ae7-8035-4222-ac31-cfb7f7754635")
+		(at 301.445 95.51)
+		(descr "Plated Hole as test Point, diameter 2.0mm")
+		(tags "test point plated hole")
+		(property "Reference" "REF**"
+			(at 0 -2.498 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a82d4ab4-f7ef-461b-a6c9-843970373897")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Plated_Hole_D2.0mm"
+			(at 0 2.45 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "811baf98-5417-4872-a8f0-8588e4ff85fc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "116e0752-3c68-4acc-8772-1b1b0be18890")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "73047768-9872-4275-ad30-ef0991f07e90")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0fa0d8ac-0ea0-4a60-8775-6ffd97c72624")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0 -1.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "5107756e-fdb4-44ed-8f8c-5b1e01f49324")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1.8 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "ff472189-46f6-4dbf-b4cb-1dff7cb93e97")
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 3 3)
+			(drill 2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "53ae1d26-b6e6-4a2c-9bbf-eb4adc01850d")
 		)
 	)
 	(footprint "pg1316sexportfootprint:CPG1316S01D02_mikeholscher"
@@ -4999,7 +5139,7 @@
 		(attr through_hole)
 		(fp_arc
 			(start -1.500003 -0.500001)
-			(mid -1 -0.000003)
+			(mid -1.000002 -0.000003)
 			(end -1.500001 0.499998)
 			(stroke
 				(width 0.1)
@@ -5010,7 +5150,7 @@
 		)
 		(fp_arc
 			(start 1.500003 0.500001)
-			(mid 0.999997 0.000003)
+			(mid 0.999999 0.000001)
 			(end 1.500001 -0.499998)
 			(stroke
 				(width 0.1)
@@ -7169,6 +7309,107 @@
 			(uuid "5b9c3160-475f-4631-8165-737072f1a45f")
 		)
 	)
+	(footprint "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+		(layer "F.Cu")
+		(uuid "50165da7-a329-453f-8308-f2e5e8eba421")
+		(at 135.545 95.56)
+		(descr "Plated Hole as test Point, diameter 2.0mm")
+		(tags "test point plated hole")
+		(property "Reference" "REF**"
+			(at 0 -2.498 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7bd713a3-1442-4b0c-8d80-5b3e1e4e1e0f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Plated_Hole_D2.0mm"
+			(at 0 2.45 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "35df5966-1bfa-4bcc-8e61-414a59152d1b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bbaf4115-86e9-489d-9f61-1ecb0c798b58")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7cae4133-b615-486b-9f83-0a64391f4202")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4aab6306-9c0a-4fff-bd7f-b4114b9c07c8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0 -1.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "15af5eb2-2313-4a44-8b3c-8ca6c0c3cf8d")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1.8 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "63adba46-5083-4a2b-b2ed-282e0e6033cb")
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 3 3)
+			(drill 2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "a17730d6-e87a-4020-9611-55795062bea8")
+		)
+	)
 	(footprint "pg1316sexportfootprint:CPG1316S01D02_mikeholscher"
 		(layer "F.Cu")
 		(uuid "52348a6c-8f3e-4ae2-b132-d0c5ccb951c8")
@@ -8067,7 +8308,7 @@
 			)
 		)
 		(property "Value" "CPG1316S01D02_mikeholscher"
-			(at -0.000001 9.000008 21)
+			(at -0.000001 9.00001 21)
 			(unlocked yes)
 			(layer "Cmts.User")
 			(hide yes)
@@ -10396,7 +10637,7 @@
 			)
 		)
 		(property "Value" "CPG1316S01D02_mikeholscher"
-			(at -0.000001 9.000008 21)
+			(at -0.000001 9.00001 21)
 			(unlocked yes)
 			(layer "Cmts.User")
 			(hide yes)
@@ -13331,7 +13572,7 @@
 		)
 		(fp_arc
 			(start 6.929997 -10.537004)
-			(mid 8.277022 -9.979026)
+			(mid 8.277018 -9.979025)
 			(end 8.835 -8.632003)
 			(stroke
 				(width 0.1)
@@ -13475,7 +13716,7 @@
 		)
 		(fp_arc
 			(start -4.999998 -2.668498)
-			(mid -4.550005 -2.218496)
+			(mid -4.550008 -2.218496)
 			(end -5 -1.768495)
 			(stroke
 				(width 0.15)
@@ -13486,7 +13727,7 @@
 		)
 		(fp_arc
 			(start -4.999997 -0.763503)
-			(mid -4.550015 -0.313495)
+			(mid -4.550018 -0.313495)
 			(end -5.000004 0.136506)
 			(stroke
 				(width 0.15)
@@ -13830,6 +14071,7 @@
 			(at -5 -0.313501 180)
 			(size 1.5 1.5)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 37 "RAW")
@@ -13839,6 +14081,7 @@
 			(at -5.000006 -2.218495 180)
 			(size 1.5 1.5)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 35 "GND")
@@ -13848,6 +14091,7 @@
 			(at -1.325003 -8.568496)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 38 "DIO")
@@ -13857,6 +14101,7 @@
 			(at 1.215002 -8.568503)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 39 "CLK")
@@ -13866,6 +14111,7 @@
 			(at -1.325003 -6.028495)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 36 "RST")
@@ -13875,6 +14121,7 @@
 			(at 1.214996 -6.028502)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 35 "GND")
@@ -16379,7 +16626,7 @@
 			)
 		)
 		(property "Value" "CPG1316S01D02_mikeholscher"
-			(at -0.000001 9.000008 21)
+			(at -0.000001 9.00001 21)
 			(unlocked yes)
 			(layer "Cmts.User")
 			(hide yes)
@@ -17850,7 +18097,7 @@
 		)
 		(fp_arc
 			(start 6.93 -10.537004)
-			(mid 8.277023 -9.979032)
+			(mid 8.277026 -9.979033)
 			(end 8.835001 -8.632009)
 			(stroke
 				(width 0.1)
@@ -18027,7 +18274,7 @@
 		)
 		(fp_arc
 			(start -1.324995 -6.478502)
-			(mid -0.875003 -6.028497)
+			(mid -0.875006 -6.028496)
 			(end -1.325006 -5.578501)
 			(stroke
 				(width 0.15)
@@ -18349,6 +18596,7 @@
 			(at -4.999996 -0.313502 180)
 			(size 1.5 1.5)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 37 "RAW")
@@ -18358,6 +18606,7 @@
 			(at -5.000004 -2.218497 180)
 			(size 1.5 1.5)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 35 "GND")
@@ -18367,6 +18616,7 @@
 			(at -1.325001 -8.568501)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 38 "DIO")
@@ -18376,6 +18626,7 @@
 			(at 1.215008 -8.568498)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 39 "CLK")
@@ -18385,6 +18636,7 @@
 			(at -1.325006 -6.028497)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 36 "RST")
@@ -18394,6 +18646,7 @@
 			(at 1.214995 -6.028497)
 			(size 1.7 1.7)
 			(drill 1)
+			(property pad_prop_castellated)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 35 "GND")
@@ -18499,6 +18752,107 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(uuid "8192b01b-9ac2-48da-a5c7-c9dd73ebf5eb")
+		)
+	)
+	(footprint "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+		(layer "F.Cu")
+		(uuid "caf4e72e-2910-4599-a8b2-22988fabbd3f")
+		(at 223.595 97.21)
+		(descr "Plated Hole as test Point, diameter 2.0mm")
+		(tags "test point plated hole")
+		(property "Reference" "REF**"
+			(at 0 -2.498 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9274f8dc-5190-4c4c-8b55-66a2602b8dea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Plated_Hole_D2.0mm"
+			(at 0 2.45 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "80b54c87-8706-4958-853a-ed200061b300")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e50daa44-50e0-4bd3-b92f-7ae291b48676")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e135f65d-a83e-41b5-bae3-543422237e55")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1a6026ea-835d-408e-ba0c-56449b48e26d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0 -1.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "5d5593c2-cf60-4c20-807f-5286e6a91aef")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1.8 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "43fc6383-6a80-4e26-87e7-8d2298ef89f2")
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 3 3)
+			(drill 2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "63de8660-eedc-40e2-82af-f2906807cd07")
 		)
 	)
 	(footprint "TestPoint:TestPoint_Plated_Hole_D2.0mm"
@@ -21353,6 +21707,107 @@
 			(uuid "4fb96623-780b-4f2c-adf8-5664fa6f6423")
 		)
 	)
+	(footprint "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+		(layer "F.Cu")
+		(uuid "e46f220a-7e5b-4507-9dad-5f0ed92cedca")
+		(at 213.37 97.185)
+		(descr "Plated Hole as test Point, diameter 2.0mm")
+		(tags "test point plated hole")
+		(property "Reference" "REF**"
+			(at 0 -2.498 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fa0e5694-4d8e-40d8-8395-b67b040b4baa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Plated_Hole_D2.0mm"
+			(at 0 2.45 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "80a09289-74ec-41b6-a0ad-e0bbc097bdc8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c779d3e-8386-4d76-a722-2bf00ba552dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5353410a-8d07-42d6-87f5-65a56c368367")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b553f99b-9966-4862-a946-3b446e2f32c7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 0 -1.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "4d8de74e-5e80-482e-b94c-fccdb79bf7c7")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1.8 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "b4e63891-b622-44e5-be8e-28e5fad33a6d")
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 3 3)
+			(drill 2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "c7d84236-4eea-44a9-9a34-73a4f313b44a")
+		)
+	)
 	(footprint "mouse-bite:mouse-bite-1mm-3mm"
 		(layer "F.Cu")
 		(uuid "e471ace6-d509-4309-959e-3abae0aec01c")
@@ -22937,7 +23392,7 @@
 		(attr through_hole)
 		(fp_arc
 			(start -1.500003 -0.500001)
-			(mid -1 -0.000003)
+			(mid -1.000002 -0.000003)
 			(end -1.500001 0.499998)
 			(stroke
 				(width 0.1)
@@ -22948,7 +23403,7 @@
 		)
 		(fp_arc
 			(start 1.500003 0.500001)
-			(mid 0.999997 0.000003)
+			(mid 0.999999 0.000001)
 			(end 1.500001 -0.499998)
 			(stroke
 				(width 0.1)
@@ -23094,7 +23549,7 @@
 		(attr smd)
 		(fp_poly
 			(pts
-				(xy 3.799998 -3.500002) (xy 3.799998 -1.650001) (xy 3.3 -1.150001) (xy -2.199997 -1.150004) (xy -2.199998 -3.900004)
+				(xy 3.799998 -3.500002) (xy 3.799998 -1.650001) (xy 3.3 -1.150001) (xy -2.199997 -1.150005) (xy -2.199998 -3.900004)
 				(xy 2.200002 -3.9) (xy 2.2 -3.500002)
 			)
 			(stroke

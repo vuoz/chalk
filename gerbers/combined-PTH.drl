@@ -1,7 +1,13 @@
 M48
+<<<<<<< Updated upstream
 ; DRILL file {KiCad 8.0.6} date 2025-07-28T21:33:16+0200
 ; FORMAT={-:-/ absolute / inch / decimal}
 ; #@! TF.CreationDate,2025-07-28T21:33:16+02:00
+=======
+; DRILL file {KiCad 8.0.6} date 2025-07-30T19:46:26+0200
+; FORMAT={-:-/ absolute / inch / decimal}
+; #@! TF.CreationDate,2025-07-30T19:46:26+02:00
+>>>>>>> Stashed changes
 ; #@! TF.GenerationSoftware,Kicad,Pcbnew,8.0.6
 ; #@! TF.FileFunction,Plated,1,2,PTH
 FMAT,2

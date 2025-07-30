@@ -1,11 +1,19 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,8.0.6*%
+<<<<<<< Updated upstream
 %TF.CreationDate,2025-07-28T21:33:20+02:00*%
+=======
+%TF.CreationDate,2025-07-30T19:46:30+02:00*%
+>>>>>>> Stashed changes
 %TF.ProjectId,combined,636f6d62-696e-4656-942e-6b696361645f,v1.0.0*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Profile,NP*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+<<<<<<< Updated upstream
 G04 Created by KiCad (PCBNEW 8.0.6) date 2025-07-28 21:33:20*
+=======
+G04 Created by KiCad (PCBNEW 8.0.6) date 2025-07-30 19:46:30*
+>>>>>>> Stashed changes
 %MOMM*%
 %LPD*%
 G01*
@@ -810,12 +818,20 @@ X207422097Y-42425754D01*
 X201207102Y-46235754D02*
 G75*
 G02*
+<<<<<<< Updated upstream
 X201207100Y-47135756I-12J-450001D01*
+=======
+X201207100Y-47135756I-13J-450001D01*
+>>>>>>> Stashed changes
 G01*
 X201207103Y-48140749D02*
 G75*
 G02*
+<<<<<<< Updated upstream
 X201207096Y-49040757I-26J-450004D01*
+=======
+X201207096Y-49040757I-27J-450004D01*
+>>>>>>> Stashed changes
 G01*
 X204882101Y-39885750D02*
 G75*
@@ -1059,7 +1075,11 @@ G01*
 X229565501Y-42426559D02*
 G75*
 G02*
+<<<<<<< Updated upstream
 X229565490Y-43326559I-12J-450000D01*
+=======
+X229565490Y-43326559I-13J-450000D01*
+>>>>>>> Stashed changes
 G01*
 X232105495Y-43326559D02*
 G75*

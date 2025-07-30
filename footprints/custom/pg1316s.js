@@ -2,6 +2,7 @@ module.exports = {
     params: {
         designator: 'S',
         side: 'F',
+        reversible: false,
         rotated: false,
         from: undefined,
         to: undefined,
@@ -20,7 +21,7 @@ module.exports = {
         }
 
 
-        const standard = `(footprint "CPG1316S01D02_mikeholscher" (version 20240108) (generator "pcbnew") (generator_version "8.0")
+        var standard = `(footprint "CPG1316S01D02_mikeholscher" (version 20240108) (generator "pcbnew") (generator_version "8.0")
                        (layer "${p.side}.Cu")
                         ${at}
                        (property "Reference" "CPG1316" (at 0 0 0)(unlocked yes)
@@ -127,8 +128,39 @@ module.exports = {
                          (thermal_bridge_angle 45)
                      (uuid "f826a543-33f3-4940-aa71-eae2ebdd2a5e")
                        )
-                     )`
+                     `
 
+        if (p.reversible) {
+            standard = `${standard}
+
+                       (pad "3" smd rect (at -6.35 -6 ${p.r} )  (size 2 2) (layers "B.Cu" "B.Paste" "B.Mask")
+                         (thermal_bridge_angle 45)
+                     (uuid "e312cf65-691b-4c88-9647-c49e7179fa47")
+
+                       )
+                       (pad "3" smd rect (at -6.35 6 ${p.r} ) (size 2 2) (layers "B.Cu" "B.Paste" "B.Mask")
+                         (thermal_bridge_angle 45)
+                     (uuid "683f6387-90aa-4353-9dee-17bc5b8a40ef")
+
+                       )
+                       (pad "3" smd rect (at 6.35 -6 ${p.r} ) (size 2 2) (layers "B.Cu" "B.Paste" "B.Mask")
+                         (thermal_bridge_angle 45)
+                     (uuid "c83e9bdd-e09b-486a-aa22-105a7a5fdb89")
+                       )
+                       (pad "3" smd rect (at 6.35 6 ${p.r} ) (size 2 2) (layers "B.Cu" "B.Paste" "B.Mask")
+                         (thermal_bridge_angle 45)
+                     (uuid "f826a543-33f3-4940-aa71-eae2ebdd2a5e")
+                       )
+
+                       (fp_circle (center 5.8 2.75) (end 5.3 2.75)
+                         (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts")(uuid "566dba42-32d0-4b4c-8f7a-5bb15ff27cbf"))
+                       (fp_circle (center -5.8 -2.75) (end -6.4 -2.75)
+                         (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts")(uuid "373791d6-d4ce-4646-8332-c971122dd698"))
+`
+
+
+        }
+        standard = `${standard})`
         return standard
     }
 }

@@ -204,6 +204,7 @@ pcbs:
         what: custom/pg1316s
         where: /^(matrix|thumbfan)_/
         params:
+          reversible: true
           from: "{{col_net}}"
           to: "{{colrow}}"
       diode:
@@ -221,6 +222,7 @@ pcbs:
         what: custom/xiao_nRF52840
         params:
           NFCPADS: false
+          reversible: true
         where:
           - ref: matrix_inner_top
           - shift: [20, 0.7]
@@ -245,11 +247,12 @@ pcbs:
       power:
         what: ceoloide/power_switch_smd_side
         params:
+          reversible: true
           from: BAT_P
           to: RAW
         where:
           - ref: matrix_index_top
-          - shift: [-2,0.62py]
+          - shift: [-2.8,0.645py]
           - rotate: 71
 
   right:

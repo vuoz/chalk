@@ -1,0 +1,13 @@
+file_format: "1"
+id: chalk
+name: "Chalk" 
+type: shield
+requires:
+  - xiao_ble
+features:
+  - keys
+  - handwired
+siblings:
+  - chalk_left
+  - chalk_right 
+

@@ -17,6 +17,7 @@
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Chalk Layout";
+        transform = <&default_transform>;
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0  135  (-900)    50   185>
             , <&key_physical_attrs 100 100   99  120  (-900)   149   170>

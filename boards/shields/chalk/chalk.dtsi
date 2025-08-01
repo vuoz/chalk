@@ -25,46 +25,44 @@
             , <&key_physical_attrs 100 100  332    0       0     0     0>
             , <&key_physical_attrs 100 100  432   35       0     0     0>
             , <&key_physical_attrs 100 100  532   47       0     0     0>
-            , <&key_physical_attrs 100 100   16  234  (-900)    66   284>
-            , <&key_physical_attrs 100 100  114  218  (-900)   164   268>
-            , <&key_physical_attrs 100 100  221  137  (-400)   271   187>
-            , <&key_physical_attrs 100 100  332  100       0     0     0>
-            , <&key_physical_attrs 100 100  432  135       0     0     0>
-            , <&key_physical_attrs 100 100  532  147       0     0     0>
-            , <&key_physical_attrs 100 100   31  333  (-900)    81   383>
-            , <&key_physical_attrs 100 100  130  317  (-900)   180   367>
-            , <&key_physical_attrs 100 100  228  237  (-400)   278   287>
-            , <&key_physical_attrs 100 100  332  200       0     0     0>
-            , <&key_physical_attrs 100 100  432  235       0     0     0>
-            , <&key_physical_attrs 100 100  532  247       0     0     0>
-            , <&key_physical_attrs 100 100  426  353       0     0     0>
-            , <&key_physical_attrs 100 100  530  359     500   580   409>
-            , <&key_physical_attrs 100 100  640  385    2000   690   435>
             , <&key_physical_attrs 100 100  912   47       0     0     0>
             , <&key_physical_attrs 100 100 1012   35       0     0     0>
             , <&key_physical_attrs 100 100 1112    0       0     0     0>
             , <&key_physical_attrs 100 100 1230   37     400  1280    87>
             , <&key_physical_attrs 100 100 1345  120     900  1395   170>
             , <&key_physical_attrs 100 100 1444  135     900  1494   185>
+            , <&key_physical_attrs 100 100   16  234  (-900)    66   284>
+            , <&key_physical_attrs 100 100  114  218  (-900)   164   268>
+            , <&key_physical_attrs 100 100  221  137  (-400)   271   187>
+            , <&key_physical_attrs 100 100  332  100       0     0     0>
+            , <&key_physical_attrs 100 100  432  135       0     0     0>
+            , <&key_physical_attrs 100 100  532  147       0     0     0>
             , <&key_physical_attrs 100 100  912  147       0     0     0>
             , <&key_physical_attrs 100 100 1012  135       0     0     0>
             , <&key_physical_attrs 100 100 1112  100       0     0     0>
             , <&key_physical_attrs 100 100 1223  137     400  1273   187>
             , <&key_physical_attrs 100 100 1330  218     900  1380   268>
             , <&key_physical_attrs 100 100 1428  234     900  1478   284>
+            , <&key_physical_attrs 100 100   31  333  (-900)    81   383>
+            , <&key_physical_attrs 100 100  130  317  (-900)   180   367>
+            , <&key_physical_attrs 100 100  228  237  (-400)   278   287>
+            , <&key_physical_attrs 100 100  332  200       0     0     0>
+            , <&key_physical_attrs 100 100  432  235       0     0     0>
+            , <&key_physical_attrs 100 100  532  247       0     0     0>
             , <&key_physical_attrs 100 100  912  247       0     0     0>
             , <&key_physical_attrs 100 100 1012  235       0     0     0>
             , <&key_physical_attrs 100 100 1112  200       0     0     0>
             , <&key_physical_attrs 100 100 1216  237     400  1266   287>
             , <&key_physical_attrs 100 100 1314  317     900  1364   367>
             , <&key_physical_attrs 100 100 1413  333     900  1463   383>
+            , <&key_physical_attrs 100 100  426  353       0     0     0>
+            , <&key_physical_attrs 100 100  530  359     500   580   409>
+            , <&key_physical_attrs 100 100  640  385    2000   690   435>
             , <&key_physical_attrs 100 100  804  385 (-2000)   854   435>
             , <&key_physical_attrs 100 100  914  359  (-500)   964   409>
             , <&key_physical_attrs 100 100 1018  353       0     0     0>
             ;
     };
-
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;

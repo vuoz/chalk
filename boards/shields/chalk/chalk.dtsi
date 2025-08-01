@@ -41,9 +41,6 @@
             , <&key_physical_attrs 100 100  530  359     500   580   409>
             , <&key_physical_attrs 100 100  640  385    2000   690   435>
             , <&key_physical_attrs 100 100  912   47       0     0     0>
-
-
-
             , <&key_physical_attrs 100 100 1012   35       0     0     0>
             , <&key_physical_attrs 100 100 1112    0       0     0     0>
             , <&key_physical_attrs 100 100 1230   37     400  1280    87>
@@ -66,7 +63,6 @@
             , <&key_physical_attrs 100 100 1018  353       0     0     0>
             ;
     };
-
 
 
     default_transform: keymap_transform_0 {

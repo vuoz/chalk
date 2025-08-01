@@ -11,7 +11,7 @@
 / {
 
     chosen {
-        zmk,physical-layout = physical-layout0;
+        zmk,physical-layout = &physical_layout0;
     };
 
     physical_layout0: physical_layout_0 {

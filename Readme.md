@@ -70,3 +70,6 @@ Before starting the build, please break of the two parts of the PCB at the break
 17. Repeat the case assembly for the other half of the keyboard.
 ### credits
 - Thanks to [mikeholscher](https://github.com/mikeholscher) for the bases of the pg1316 footprints. I modified them slightly to improve soldering and adapted them to ergogen but the original was provided on his [Github](https://github.com/mikeholscher/zmk-config-mikefive/tree/main/files/footprint-and-cad)
+- Thanks to these tools for making creating zmk pyhsical layouts easier:
+    - [Zmk pyhsical layout converter](https://zmk-physical-layout-converter.streamlit.app/)
+    - [Keymap layout helper](https://nickcoutsos.github.io/keymap-layout-tools/)

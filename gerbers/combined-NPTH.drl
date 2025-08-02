@@ -1,13 +1,7 @@
 M48
-<<<<<<< Updated upstream
-; DRILL file {KiCad 8.0.6} date 2025-07-28T21:33:16+0200
+; DRILL file {KiCad 8.0.6} date 2025-08-02T13:41:40+0200
 ; FORMAT={-:-/ absolute / inch / decimal}
-; #@! TF.CreationDate,2025-07-28T21:33:16+02:00
-=======
-; DRILL file {KiCad 8.0.6} date 2025-07-30T19:46:26+0200
-; FORMAT={-:-/ absolute / inch / decimal}
-; #@! TF.CreationDate,2025-07-30T19:46:26+02:00
->>>>>>> Stashed changes
+; #@! TF.CreationDate,2025-08-02T13:41:40+02:00
 ; #@! TF.GenerationSoftware,Kicad,Pcbnew,8.0.6
 ; #@! TF.FileFunction,NonPlated,1,2,NPTH
 FMAT,2
@@ -69,8 +63,8 @@ X8.6323Y-1.6437
 X8.6323Y-1.6929
 X8.6323Y-3.8996
 T2
-X6.5193Y-1.3982
-X6.631Y-1.4367
-X10.5716Y-1.4373
-X10.6833Y-1.3989
+X6.525Y-1.3887
+X6.6367Y-1.4272
+X10.5755Y-1.4252
+X10.6872Y-1.3867
 M30

@@ -5,3 +5,5 @@ pcbs/fp-info-cache
 pcbs/~combined.kicad_pcb.lck
 gerbers/Archive.zip
 pcbs/combined.step
+
+pcbs/~reversible.kicad_pcb.lck

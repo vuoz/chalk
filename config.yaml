@@ -219,15 +219,14 @@ pcbs:
         adjust: 
           shift: [ 0,2.7]
       mcu:
-        what: custom/xiao_nRF52840
+        what: custom/xiao_nRF52840_new
         params:
           NFCPADS: false
-          reversible: true
         where:
           - ref: matrix_inner_top
           - shift: [20, 0.7]
       reset:
-        what: ceoloide/reset_switch_tht_top
+        what: custom/reset_switch_modified
         params:
           from: GND
           to: RST
@@ -236,8 +235,11 @@ pcbs:
           - shift: [5.7, 0.7py]
           - rotate: 28
       battery:
-        what: ceoloide/battery_connector_jst_ph_2
+        what: custom/battery_connector_modified
         params:
+          include_silkscreen: true
+          reversible: true
+          include_courtyard: false
           side: "F"
           BAT_P: BAT_P
           BAT_N: GND
@@ -254,7 +256,28 @@ pcbs:
           - ref: matrix_index_top
           - shift: [-2.8,0.645py]
           - rotate: 71
+      holeCompartment:
+        what: ceoloide/mounting_hole_npth
+        where:
+          ref: [thumbfan_far_thumb]
+          shift: [0.25px,0.65py]
+      holeTopLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          - ref: [matrix_ring_top]
+          - shift: [0.43px, 0.61py]
+      holeBottomLeft:
+        what: ceoloide/mounting_hole_npth
+        where:
+          - ref: [matrix_ring_bottom]
+          - shift: [0px,-0.68py]
+      holeBottomRight:
+        what: ceoloide/mounting_hole_npth
+        where:
+          - ref: [matrix_middle_bottom]
+          - shift: [-0.1px,-1py]
 
+     
   right:
     template: kicad8
     outlines:

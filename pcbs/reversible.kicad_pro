@@ -258,7 +258,7 @@
       "plot": "../gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "left.step",
+      "step": "reversible.step",
       "svg": "",
       "vrml": ""
     },

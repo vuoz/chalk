@@ -3,5 +3,6 @@ output/
 .DS_Store
 pcbs/fp-info-cache
 pcbs/~combined.kicad_pcb.lck
+pcbs/reversible.step
 gerbers/Archive.zip
 pcbs/combined.step

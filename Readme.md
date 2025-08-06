@@ -1,5 +1,6 @@
 # Chalk, a ultra low profile split keyboard 
-![preview](./imgs/IMG_5293.jpeg)
+![preview](./imgs/IMG_5312.jpeg)
+![preview transparent](./imgs/IMG_5293.jpeg)
 
 ### Features
 - Ultra low profile, 6mm thickness
@@ -18,7 +19,15 @@
 - Make sure to work in a well ventilated area and wash your hands afterwards.
 - These switches are super unforgiving. You will most likely not be able to desolder these once attached. Take you time and be aware that one simple mistake could ruin the whole board
 - Out of the box these switchs sound horrendous, you will need to do some mods. [Mikeholscher](https://github.com/mikeholscher/zmk-config-mikefive/tree/main/files/mods) has some guides . I am still experimenting.
-- The battery is quite a tight fit. Some varients might not fit perfectly, others might fit. Mathematically it should, but small deviations in size might affect the fit.
+- The battery is quite a tight fit. Some varients might not fit perfectly, others will. Mathematically it should, but small deviations in size might affect the fit.
+
+
+## Ordering guide for the PCB
+- Find the files in the /gerber folder,create a zip file and upload it to you PCB manufacturer of choice.
+- Specs:
+    - 1mm thickness ( the case is designed for a 1mm thick PCB ) 
+    - lead free HASL ( not required but recommended )
+    - Pick a nice solder mask color. There is no space for a frontplate, so the solder mask will be visible.
 
 
 ## Build guide
@@ -38,6 +47,7 @@
 - 1x Right top part of the case
 - 1x Left bottom part of the case
 - 1x Right bottom part of the case
+- 2x Reset switch cover
 
 ### Build guide
 
@@ -68,6 +78,7 @@ Before starting the build, please break of the two parts of the PCB at the break
 15. After the previous step, place the top case on top of the pcb, turn it around and attach the bottom part of the case with the M2 screws.  ![backplate](./imgs/IMG_5305.jpeg)
 16. Now insert the rubber pads in the preprinted holes. 
 17. Repeat the case assembly for the other half of the keyboard.
+18. Lastly, put a little bit of adhesive on on the button of the reset switch. Now attach the reset switch cover and press it down slightly. The stl files for the reset switch cover can be found in /3dfiles. Make sure to print them at the highest quality setting to ensure accuracy. ![reset switch cover](./imgs/IMG_5309.jpeg)
 ### credits
 - Thanks to [mikeholscher](https://github.com/mikeholscher) for the bases of the pg1316 footprints. I modified them slightly to improve soldering and adapted them to ergogen but the original was provided on his [Github](https://github.com/mikeholscher/zmk-config-mikefive/tree/main/files/footprint-and-cad)
 - Thanks to these tools for making creating zmk pyhsical layouts easier:

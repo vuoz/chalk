@@ -31,6 +31,23 @@ module.exports = {
             return rot;
         }
 
+        function genPad(at, padnum, net, side, uuid) {
+
+            return `	(pad "${padnum}" smd roundrect
+		(at ${at.x} ${at.y} ${getRotation(p.rot + 180)} )
+		(size 1.3 1.524)
+		(layers "${side}.Cu" "${side}.Mask")
+		(roundrect_rratio 0.1)
+		(thermal_bridge_angle 45)
+		(uuid "${uuid}")
+        ${net}
+	)
+    `
+
+
+
+        }
+
 
 
 
@@ -41,7 +58,7 @@ footprint "XIAO-nRF52840-SMD"
 	(generator_version "8.0")
 	(layer "F.Cu")
     ${p.at}
-	(property "Reference" "REF**"
+	(property "Reference" "XIAOBLE"
 		(at -9.445 -11.5 0)
 		(layer "F.SilkS")
 		(uuid "a9f5f5dd-597c-45dd-b31d-a35c3963eed2")
@@ -458,533 +475,167 @@ footprint "XIAO-nRF52840-SMD"
 		(layer "F.Fab")
 		(uuid "7bc235cf-ac41-4529-806b-158b8898c264")
 	)
-	(pad "1" smd roundrect
-		(at -8.155 -7.62 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "82bbfb55-8baa-4218-ac89-ab07d82ef7f8")
-        ${p.P0.str}
-	)
+
+
+    ${genPad({ x: -9.2, y: -7.62 }, "1", p.P0.str, "F", "i8ef9914-2d15-494c-9020-2334abcc1460")}
 	(pad "" np_thru_hole circle
 		(at -7.62 -7.62 ${getRotation(p.rot + 180)} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Cu" "B.Mask")
 		(remove_unused_layers no)
-		(uuid "f2fffd4f-460c-4b4d-b954-811e935ed1d6")
-        ${p.P0.str}
+        (clearance 0.2 )
 	)
-	(pad "2" smd roundrect
-		(at -8.155 -5.08 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "18ef9914-2d15-494c-9020-2334abcc1460")
-
-        ${p.P1.str}
-	)
+    ${genPad({ x: -9.2, y: -5.08 }, "2", p.P1.str, "F", "18ef9914-2d15-494c-9020-2334abcc1460")}
 	(pad "" np_thru_hole circle
 		(at -7.62 -5.08 ${getRotation(p.rot + 180)} )
 		(size 0.9 0.9 )
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "4732cc3f-e641-4870-a9b3-ae13729c7bba")
-
-        ${p.P1.str}
+        (clearance 0.2 )
 	)
-	(pad "3" smd roundrect
-		(at -8.155 -2.54 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "15338a55-8514-4218-a2c1-2cae003104c3")
-
-        ${p.P2.str}
-	)
+    ${genPad({ x: -9.2, y: -2.54 }, "3", p.P2.str, "F", "15338a55-8514-4218-a2c1-2cae003104c3")}
 	(pad "" np_thru_hole circle
 		(at -7.62 -2.54 ${getRotation(p.rot + 180)} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "0cef5e55-d8ff-4394-9cc1-cc318608b0d9")
-
-        ${p.P2.str}
+        (clearance 0.2 )
 
 	)
-	(pad "4" smd roundrect
-		(at -8.155 0 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "191a259d-5773-4a80-91de-baa69611fab8")
-
-        ${p.P3.str}
-	)
+    ${genPad({ x: -9.2, y: 0 }, "4", p.P3.str, "F", "191a259d-5773-4a80-91de-baa69611fab8")}
 	(pad "" np_thru_hole circle
 		(at -7.62 0 ${getRotation(p.rot + 180)} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "200b8da4-9395-48a5-b7ac-92a6a147c215")
-
-        ${p.P3.str}
+        (clearance 0.2 )
 	)
-	(pad "5" smd roundrect
-		(at -8.155 2.54 ${getRotation(p.rot + 180)})
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "52012467-1c46-4a8e-aa82-6f6ce69bd2ca")
-
-        ${p.P4.str}
-	)
+    ${genPad({ x: -9.2, y: 2.54 }, "5", p.P4.str, "F", "52012467-1c46-4a8e-aa82-6f6ce69bd2ca")}
 	(pad "" np_thru_hole circle
 		(at -7.62 2.54 ${getRotation(p.rot + 180)} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "2b50ccce-3634-47d1-bf7d-a3db4f3f9a9f")
-        ${p.P4.str}
+        (clearance 0.2 )
 	)
-	(pad "6" smd roundrect
-		(at -8.155 5.08 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "04aeaf95-142a-40f6-97a3-04453fc50824")
-
-        ${p.P5.str}
-	)
+    ${genPad({ x: -9.2, y: 5.08 }, "6", p.P5.str, "F", "04aeaf95-142a-40f6-97a3-04453fc50824")}
 	(pad "" np_thru_hole circle
 		(at -7.62 5.08 ${getRotation(p.rot + 180)} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "7636de9d-d8e5-49c9-9fff-0cd76515690d")
-        ${p.P5.str}
+        (clearance 0.2 )
 	)
-	(pad "7" smd roundrect
-		(at -8.155 7.62 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "e997fd0b-233a-4656-afad-cb2f8b9d87c9")
-        ${p.P6.str}
-	)
+    ${genPad({ x: -9.2, y: 7.62 }, "7", p.P6.str, "F", "e997fd0b-233a-4656-afad-cb2f8b9d87c9")}
 	(pad "" np_thru_hole circle
 		(at -7.62 7.62 ${getRotation(p.rot + 180)} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "9d2c0d0c-05dd-477e-8384-b14eec83fc2e")
-        ${p.P6.str}
+        (clearance 0.2 )
 	)
 	(pad "" np_thru_hole circle
 		(at 7.62 7.62 ${p.rot} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "1e50c66f-49b8-4b03-9889-8cc6ca45ad8e")
-        ${p.P7.str}
+        (clearance 0.2 )
 	)
-	(pad "8" smd roundrect
-		(at 8.155 7.62 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "e7b72803-b5f0-433c-8313-83247355fb43")
-
-        ${p.P7.str}
-	)
+    ${genPad({ x: 9.2, y: 7.62 }, "8", p.P7.str, "F", "e7b72803-b5f0-433c-8313-83247355fb43")}
 	(pad "" np_thru_hole circle
 		(at 7.62 5.08 ${p.rot} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "808bf9dc-1c26-4a77-93c9-e4c6d5eccbb2")
-        ${p.P8.str}
+        (clearance 0.2 )
 	)
-	(pad "9" smd roundrect
-		(at 8.155 5.08 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "532de3b6-bd30-47c5-b70e-0bca6abbd997")
-        ${p.P8.str}
-	)
+
+    ${genPad({ x: 9.2, y: 5.08 }, "9", p.P8.str, "F", "532de3b6-bd30-47c5-b70e-0bca6abbd997")}
 	(pad "" np_thru_hole circle
 		(at 7.62 2.54 ${p.rot})
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu") 
 		(remove_unused_layers no)
 		(uuid "a792a2ac-537b-4136-8f92-b81f7ce8f753")
-        ${p.P9.str}
+        (clearance 0.2 )
 	)
-	(pad "10" smd roundrect
-		(at 8.155 2.54 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "6e3f5c75-6143-468e-bb07-d89020c03f59")
-        ${p.P9.str}
-	)
+
+    ${genPad({ x: 9.2, y: 2.54 }, "10", p.P9.str, "F", "6e3f5c75-6143-468e-bb07-d89020c03f59")}
 	(pad "" np_thru_hole circle
 		(at 7.62 0 ${p.rot} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "fb78046a-9b91-4893-b010-827957cc07be")
-        ${p.P10.str}
+        (clearance 0.2 )
 	)
-	(pad "11" smd roundrect
-		(at 8.155 0 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "5249f425-bece-432d-8076-28e1b8b386e3")
-        ${p.P10.str}
-	)
+
+    ${genPad({ x: 9.2, y: 0 }, "11", p.P10.str, "F", "5249f425-bece-432d-8076-28e1b8b386e3")}
 	(pad "" np_thru_hole circle
 		(at 7.62 -2.54 ${p.rot} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "0b8ccc97-5100-4dcf-8500-e99789ee0b4c")
-        ${p.VCC33.str}
+        (clearance 0.2 )
 
 	)
-	(pad "12" smd roundrect
-		(at 8.155 -2.54 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "82f1bbd1-708b-4d2d-9113-7ba3c2313670")
-        ${p.VCC33.str}
-	)
+    ${genPad({ x: 9.2, y: -2.54 }, "12", p.VCC33.str, "F", "82f1bbd1-708b-4d2d-9113-7ba3c2313670")}
 	(pad "" np_thru_hole circle
 		(at 7.62 -5.08 ${p.rot} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "03882061-01af-484b-b620-9e92a3daaf68")
-        ${p.GND.str}
+        (clearance 0.2 )
 	)
-	(pad "13" smd roundrect
-		(at 8.155 -5.08 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "954f51d1-3d75-42fb-a02a-7389b30718d9")
-        ${p.GND.str}
-	)
+    ${genPad({ x: 9.2, y: -5.08 }, "13", p.GND.str, "F", "954f51d1-3d75-42fb-a02a-7389b30718d9")}
 	(pad "" np_thru_hole circle
 		(at 7.62 -7.62 ${p.rot} )
 		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "F.Cu" "F.Mask")
+		(drill 0.9)
+		(layers "F.Cu" "F.Mask" "B.Mask" "B.Cu")
 		(remove_unused_layers no)
 		(uuid "c6d1af47-da13-4409-9ab1-55d358cc57eb")
-        ${p.VCC5.str}
-	)
-	(pad "14" smd roundrect
-		(at 8.155 -7.62 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "F.Cu" "F.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "6b725fd4-d6f0-46bf-b3e0-7ec07cc05622")
-        ${p.VCC5.str}
+        (clearance 0.2 )
 	)
 
-	(pad "1" smd roundrect
-		(at -8.155 -7.62 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "82bbfb55-8baa-4218-ac89-ab07d82ef7f8")
-        ${p.VCC5.str}
-	)
-	(pad "" np_thru_hole circle
-		(at -7.62 -7.62 ${getRotation(p.rot + 180)} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "f2fffd4f-460c-4b4d-b954-811e935ed1d6")
-        ${p.VCC5.str}
-	)
-	(pad "2" smd roundrect
-		(at -8.155 -5.08 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "18ef9914-2d15-494c-9020-2334abcc1460")
-
-        ${p.GND.str}
-	)
-	(pad "" np_thru_hole circle
-		(at -7.62 -5.08 ${getRotation(p.rot + 180)} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "4732cc3f-e641-4870-a9b3-ae13729c7bba")
-
-        ${p.GND.str}
-	)
-	(pad "3" smd roundrect
-		(at -8.155 -2.54 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "15338a55-8514-4218-a2c1-2cae003104c3")
-
-        ${p.VCC33.str}
-	)
-	(pad "" np_thru_hole circle
-		(at -7.62 -2.54 ${getRotation(p.rot + 180)} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "0cef5e55-d8ff-4394-9cc1-cc318608b0d9")
-
-        ${p.VCC33.str}
-
-	)
-	(pad "4" smd roundrect
-		(at -8.155 0 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "191a259d-5773-4a80-91de-baa69611fab8")
-
-        ${p.P10.str}
-	)
-	(pad "" np_thru_hole circle
-		(at -7.62 0 ${getRotation(p.rot + 180)} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "200b8da4-9395-48a5-b7ac-92a6a147c215")
-
-        ${p.P10.str}
-	)
-	(pad "5" smd roundrect
-		(at -8.155 2.54 ${getRotation(p.rot + 180)})
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "52012467-1c46-4a8e-aa82-6f6ce69bd2ca")
-
-        ${p.P9.str}
-	)
-	(pad "" np_thru_hole circle
-		(at -7.62 2.54 ${getRotation(p.rot + 180)} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "2b50ccce-3634-47d1-bf7d-a3db4f3f9a9f")
-        ${p.P9.str}
-	)
-	(pad "6" smd roundrect
-		(at -8.155 5.08 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "04aeaf95-142a-40f6-97a3-04453fc50824")
-
-        ${p.P8.str}
-	)
-	(pad "" np_thru_hole circle
-		(at -7.62 5.08 ${getRotation(p.rot + 180)} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "7636de9d-d8e5-49c9-9fff-0cd76515690d")
-        ${p.P8.str}
-	)
-	(pad "7" smd roundrect
-		(at -8.155 7.62 ${getRotation(p.rot + 180)} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "e997fd0b-233a-4656-afad-cb2f8b9d87c9")
-        ${p.P7.str}
-	)
-	(pad "" np_thru_hole circle
-		(at -7.62 7.62 ${getRotation(p.rot + 180)} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "9d2c0d0c-05dd-477e-8384-b14eec83fc2e")
-        ${p.P7.str}
-	)
-	(pad "" np_thru_hole circle
-		(at 7.62 7.62 ${p.rot} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "1e50c66f-49b8-4b03-9889-8cc6ca45ad8e")
-        ${p.P6.str}
-	)
-	(pad "8" smd roundrect
-		(at 8.115 7.62 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "e7b72803-b5f0-433c-8313-83247355fb43")
-
-        ${p.P6.str}
-	)
-	(pad "" np_thru_hole circle
-		(at 7.62 5.08 ${p.rot} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "808bf9dc-1c26-4a77-93c9-e4c6d5eccbb2")
-        ${p.P5.str}
-	)
-	(pad "9" smd roundrect
-		(at 8.115 5.08 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "532de3b6-bd30-47c5-b70e-0bca6abbd997")
-        ${p.P5.str}
-	)
-	(pad "" np_thru_hole circle
-		(at 7.62 2.54 ${p.rot})
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "a792a2ac-537b-4136-8f92-b81f7ce8f753")
-        ${p.P4.str}
-	)
-	(pad "10" smd roundrect
-		(at 8.115 2.54 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "6e3f5c75-6143-468e-bb07-d89020c03f59")
-        ${p.P4.str}
-	)
-	(pad "" np_thru_hole circle
-		(at 7.62 0 ${p.rot} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "fb78046a-9b91-4893-b010-827957cc07be")
-        ${p.P3.str}
-	)
-	(pad "11" smd roundrect
-		(at 8.115 0 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "5249f425-bece-432d-8076-28e1b8b386e3")
-        ${p.P3.str}
-	)
-	(pad "" np_thru_hole circle
-		(at 7.62 -2.54 ${p.rot} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "0b8ccc97-5100-4dcf-8500-e99789ee0b4c")
-        ${p.P2.str}
-
-	)
-	(pad "12" smd roundrect
-		(at 8.115 -2.54 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "82f1bbd1-708b-4d2d-9113-7ba3c2313670")
-        ${p.P2.str}
-	)
-	(pad "" np_thru_hole circle
-		(at 7.62 -5.08 ${p.rot} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "03882061-01af-484b-b620-9e92a3daaf68")
-        ${p.P1.str}
-	)
-	(pad "13" smd roundrect
-		(at 8.115 -5.08 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "954f51d1-3d75-42fb-a02a-7389b30718d9")
-        ${p.P1.str}
-	)
-	(pad "" np_thru_hole circle
-		(at 7.62 -7.62 ${p.rot} )
-		(size 0.9 0.9)
-		(drill 0.889)
-		(layers "B.Cu" "B.Mask")
-		(remove_unused_layers no)
-		(uuid "c6d1af47-da13-4409-9ab1-55d358cc57eb")
-        ${p.P0.str}
-	)
-	(pad "14" smd roundrect
-		(at 8.115 -7.62 ${p.rot} )
-		(size 3.3 1.524)
-		(layers "B.Cu" "B.Mask")
-		(roundrect_rratio 0.1)
-		(thermal_bridge_angle 45)
-		(uuid "6b725fd4-d6f0-46bf-b3e0-7ec07cc05622")
-        ${p.P0.str}
-	)
+    ${genPad({ x: 9.2, y: -7.62 }, "14", p.VCC5.str, "F", "6b725fd4-d6f0-46bf-b3e0-7ec07cc05622")}
+    ${genPad({ x: -9.2, y: -7.62 }, "1", p.VCC5.str, "B", "82bbfb55-8baa-4218-ac89-ab07d82ef7f8")}
+    ${genPad({ x: -9.2, y: -5.08 }, "2", p.GND.str, "B", "18ef9914-2d15-494c-9020-2334abcc1460")}
+    ${genPad({ x: -9.2, y: -2.54 }, "3", p.VCC33.str, "B", "15338a55-8514-4218-a2c1-2cae003104c3")}
+    ${genPad({ x: -9.2, y: 0 }, "4", p.P10.str, "B", "191a259d-5773-4a80-91de-baa69611fab8")}
+    ${genPad({ x: -9.2, y: 2.54 }, "5", p.P9.str, "B", "52012467-1c46-4a8e-aa82-6f6ce69bd2ca")}
+    ${genPad({ x: -9.2, y: 5.08 }, "6", p.P8.str, "B", "04aeaf95-142a-40f6-97a3-04453fc50824")}
+    ${genPad({ x: -9.2, y: 7.62 }, "7", p.P7.str, "B", "e997fd0b-233a-4656-afad-cb2f8b9d87c9")}
+    ${genPad({ x: 9.2, y: 7.62 }, "8", p.P6.str, "B", "e7b72803-b5f0-433c-8313-83247355fb43")}
+    ${genPad({ x: 9.2, y: 5.08 }, "9", p.P5.str, "B", "532de3b6-bd30-47c5-b70e-0bca6abbd997")}
+    ${genPad({ x: 9.2, y: 2.54 }, "10", p.P4.str, "B", "6e3f5c75-6143-468e-bb07-d89020c03f59")}
+    ${genPad({ x: 9.2, y: 0 }, "11", p.P3.str, "B", "5249f425-bece-432d-8076-28e1b8b386e3")}
+    ${genPad({ x: 9.2, y: -2.54 }, "12", p.P2.str, "B", "82f1bbd1-708b-4d2d-9113-7ba3c2313670")}
+    ${genPad({ x: 9.2, y: -5.08 }, "13", p.P1.str, "B", "954f51d1-3d75-42fb-a02a-7389b30718d9")}	
+    ${genPad({ x: 9.2, y: -7.62 }, "14", p.P0.str, "B", "6b725fd4-d6f0-46bf-b3e0-7ec07cc05622")}
 
 
 
@@ -992,15 +643,7 @@ footprint "XIAO-nRF52840-SMD"
 
 
 (fp_line (start -2.0000  0.6000) (end -5.0000  0.6000) (layer "Edge.Cuts") (width 0.15))
-(fp_line (start -5.0000  0.6000) (end -5.0000  0.1365) (layer "Edge.Cuts") (width 0.15))
-
-(fp_arc  (start -5.0000  0.1365) (mid -4.5500 -0.3135) (end -5.0000 -0.7635) (layer "Edge.Cuts") (width 0.15))
-
-(fp_line (start -5.0000 -0.7635) (end -5.0000 -1.7685) (layer "Edge.Cuts") (width 0.15))
-
-(fp_arc  (start -5.0000 -1.7685) (mid -4.5500 -2.2185) (end -5.0000 -2.6685) (layer "Edge.Cuts") (width 0.15))
-
-(fp_line (start -5.0000 -2.6685) (end -5.0000 -3.1000) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -5.0000  0.6000) (end -5.0000  -3.100) (layer "Edge.Cuts") (width 0.15))
 (fp_line (start -5.0000 -3.1000) (end -2.0000 -3.1000) (layer "Edge.Cuts") (width 0.15))
 (fp_line (start -2.0000 -3.1000) (end -2.0000  0.6000) (layer "Edge.Cuts") (width 0.15))
 
@@ -1024,16 +667,9 @@ footprint "XIAO-nRF52840-SMD"
     )
 
     (fp_line (start 2.0000  0.6000) (end  5.0000  0.6000) (layer "Edge.Cuts") (width 0.15))
-    (fp_line (start 5.0000  0.6000) (end  5.0000  0.1365) (layer "Edge.Cuts") (width 0.15))
-    (fp_arc  (start 5.0000  0.1365) (mid  4.5500 -0.3135) (end  5.0000 -0.7635) (layer "Edge.Cuts") (width 0.15))
-
-(fp_line (start 5.0000 -0.7635) (end  5.0000 -1.7685) (layer "Edge.Cuts") (width 0.15))
-
-(fp_arc  (start 5.0000 -1.7685) (mid  4.5500 -2.2185) (end  5.0000 -2.6685) (layer "Edge.Cuts") (width 0.15))
-
-(fp_line (start  5.0000 -2.6685) (end  5.0000 -3.1000) (layer "Edge.Cuts") (width 0.15))
-(fp_line (start  5.0000 -3.1000) (end  2.0000 -3.1000) (layer "Edge.Cuts") (width 0.15))
-(fp_line (start  2.0000 -3.1000) (end  2.0000  0.6000) (layer "Edge.Cuts") (width 0.15))
+    (fp_line (start 5.0000  0.6000) (end  5.0000  -3.1) (layer "Edge.Cuts") (width 0.15))
+    (fp_line (start  5.0000 -3.1000) (end  2.0000 -3.1000) (layer "Edge.Cuts") (width 0.15))
+    (fp_line (start  2.0000 -3.1000) (end  2.0000  0.6000) (layer "Edge.Cuts") (width 0.15))
 
     (pad "15" thru_hole circle
 		(at 5 -0.3135 ${getRotation(p.rot + 180)} )
@@ -1054,15 +690,10 @@ footprint "XIAO-nRF52840-SMD"
         ${p.GND.str}
     )
 
-
-(fp_arc  (start -1.325 -5.5785) (mid -0.875 -6.0285) (end -1.325 -6.4785) (layer "Edge.Cuts") (width 0.15))
-(fp_line (start -1.325 -6.4785) (end -1.325 -8.1185) (layer "Edge.Cuts") (width 0.15))
-(fp_arc  (start -1.325 -8.1185) (mid -0.875 -8.5685) (end -1.325 -9.0185) (layer "Edge.Cuts") (width 0.15))
-(fp_line (start -1.325 -9.0185) (end  1.215 -9.0185) (layer "Edge.Cuts") (width 0.15))
-(fp_arc  (start  1.215 -9.0185) (mid  0.765 -8.5685) (end  1.215 -8.1185) (layer "Edge.Cuts") (width 0.15))
-(fp_line (start  1.215 -8.1185) (end  1.215 -6.4785) (layer "Edge.Cuts") (width 0.15))
-(fp_arc  (start  1.215 -6.4785) (mid  0.765 -6.0285) (end  1.215 -5.5785) (layer "Edge.Cuts") (width 0.15))
 (fp_line (start  1.215 -5.5785) (end -1.325 -5.5785) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start 1.215 -5.5785) (end 1.215 -9.0185) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -1.325 -9.0185) (end  1.215 -9.0185) (layer "Edge.Cuts") (width 0.15))
+(fp_line (start -1.325 -5.5785) (end  -1.325 -9.0185) (layer "Edge.Cuts") (width 0.15))
 
     
 	(pad "19" thru_hole circle

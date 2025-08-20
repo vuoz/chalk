@@ -1,4 +1,4 @@
-# Chalk, a ultra low profile split keyboard 
+# Chalk, an ultra low profile split keyboard 
 ![preview](./imgs/IMG_5312.jpeg)
 ![preview transparent](./imgs/IMG_5293.jpeg)
 

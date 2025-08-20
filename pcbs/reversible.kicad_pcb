@@ -1377,7 +1377,7 @@
 			(at -1.734996 2.250002 160.6)
 			(size 0.7 1.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(uuid "bb157ee1-b835-4348-910c-bece4a3f11a5")
+			(uuid "ac2f2153-decb-4808-b820-002481a5de07")
 		)
 		(pad "2" smd rect
 			(at -1.734999 0.749997 340.6)
@@ -1391,7 +1391,7 @@
 			(size 0.7 1.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 34 "RAW")
-			(uuid "9aead433-43ee-4114-9ca0-d81676c0dce9")
+			(uuid "56f607a6-5b96-4ce5-8605-0424ac0fcac5")
 		)
 		(pad "3" smd rect
 			(at -1.734999 -2.250004 160.6)
@@ -1405,7 +1405,7 @@
 			(size 0.7 1.5)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net 37 "BAT_P")
-			(uuid "a9bb274a-28ff-4643-9c0d-f5e05c4687f1")
+			(uuid "0cab7728-3e92-43eb-8f12-8ee645a349d0")
 		)
 		(embedded_fonts no)
 	)
@@ -20972,7 +20972,7 @@
 		(net 0)
 		(net_name "")
 		(layers "F.Cu" "B.Cu")
-		(uuid "7d53a4d1-2318-4d72-877d-8eacb3b562e6")
+		(uuid "c4786a95-f563-47d3-8d1d-a58a68dcb666")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0.5)
@@ -20983,12 +20983,11 @@
 			(thermal_gap 0.5)
 			(thermal_bridge_width 0.5)
 			(island_removal_mode 1)
-			(island_area_min 10)
+			(island_area_min 9.999999)
 		)
 		(polygon
 			(pts
-				(xy 58.940929 36.482049) (xy 65.942047 137.672459) (xy 231.885294 157.419805) (xy 268.919141 17.403054)
-				(xy 100.35233 20.159844) (xy 58.858764 36.544089)
+				(xy 77.14 29.44) (xy 78.42 125.02) (xy 229.69 126.12) (xy 229.33 29.26) (xy 76.95 29.26)
 			)
 		)
 		(filled_polygon

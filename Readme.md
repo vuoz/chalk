@@ -59,7 +59,9 @@
 
 
 #### Buidling steps
-Before starting the build, please break of the two parts of the PCB at the breakoff point in the middle. For a better fit in the case, I would recommend sanding the edges of the breakoff points. Otherwise the PCB will not fit into the case properly.
+
+##### Disclaimer
+Most images in this guide were taken with an earlier version of the PCB, but the steps still apply. So don't worry if yours looks different. 
 
 1. To solder the diodes, first put a blob of solder on one of the pads. ![pcb](./imgs/IMG_5256.jpeg)
 2. Sort the diodes by direction. **This is very important**. Make sure the line on the diode on one side of them is lining up with the line on the PCB, where the diodes should go . ![diodes](./imgs/IMG_5257.jpeg)
@@ -73,7 +75,7 @@ Before starting the build, please break of the two parts of the PCB at the break
 10. Now attach the reset switch. Place the legs through the through holes. Then add solder to the top of the through holes. Afterwards, make sure to cut the legs flush on the backside, otherwise they will interfere with the backplate. ![reset switch](./imgs/IMG_5270.jpeg)
 11. Now attach the power switch. Make sure not to use too much solder. The fit between case and reset switch is quite tight. To solder the power switch, first put the power switch into its holes on the pcb. Hold it in place with a tweezer and add a bit of solder to one of the pads. Then add solder to all of the other pads.  ![power switch](./imgs/IMG_5273.jpeg)
 12. Now we will attach the battery. Make sure the battery cables are cut to lenght. There should not be too much slack, since that would use up too much space in the case. **Before soldering, please check the polarity on the battery.** Take the insulation of the ends of the cables and place them through the holes for the battery , then solder them in place. Turn the PCB around and cut of the excess of the cables. ![](./imgs/IMG_5274.jpeg)
-13. Repeat all the steps for the other half of the keyboard.
+13. Repeat all the steps for the other half of the keyboard, by taking another PCB and flipping it around. Solder all components on this side, otherwise you end up with 2 left sides.
 14. To attach the threaded inserts, take the top part of the case and place the threaded inserts in the preprinted holes. Use a big attachment for your soldering iron and set its temperature to 400C. Now slowly heat of the threaded insert until it sits flush with the case. Make sure that the threaded inserts are level and did not twist or are not straight. ![theaded inserts](./imgs/IMG_5277.jpeg) ![threade inserts sunken](./imgs/IMG_5278.jpeg)
 15. After the previous step, place the top case on top of the pcb, turn it around and attach the bottom part of the case with the M2 screws.  ![backplate](./imgs/IMG_5305.jpeg)
 16. Now insert the rubber pads in the preprinted holes. 

@@ -3,19 +3,19 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "8.0.6"
+      "Version": "9.0.3"
     },
-    "CreationDate": "2025-08-02T13:41:44+02:00"
+    "CreationDate": "2025-08-23T22:26:56+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "combined",
-      "GUID": "636f6d62-696e-4656-942e-6b696361645f",
+      "Name": "reversible",
+      "GUID": "72657665-7273-4696-926c-652e6b696361",
       "Revision": "v1.0.0"
     },
     "Size": {
-      "X": 267.7743,
-      "Y": 86.9116
+      "X": 132.8864,
+      "Y": 86.9107
     },
     "LayerNumber": 2,
     "BoardThickness": 1.0,
@@ -34,47 +34,47 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "combined-F_Cu.gbr",
+      "Path": "reversible-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "combined-B_Cu.gbr",
+      "Path": "reversible-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "combined-F_Paste.gbr",
+      "Path": "reversible-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "combined-B_Paste.gbr",
+      "Path": "reversible-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "combined-F_Silkscreen.gbr",
+      "Path": "reversible-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "combined-B_Silkscreen.gbr",
+      "Path": "reversible-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "combined-F_Mask.gbr",
+      "Path": "reversible-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "combined-B_Mask.gbr",
+      "Path": "reversible-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "combined-Edge_Cuts.gbr",
+      "Path": "reversible-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }

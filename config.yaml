@@ -83,6 +83,10 @@ outlines:
     - what: rectangle
       where: true
       size: [16,16]
+  raw_cutouts_smaller:
+    - what: rectangle
+      where: true
+      size: [15,15]
   keys:
     - what: rectangle
       where: true
@@ -185,6 +189,12 @@ outlines:
       expand: 1.5                
       fillet: 2
 
+
+
+  frontplate_left_silkscreen_cover::
+    - name: board_left
+    - operation: subtract
+      name: raw_cutouts_smaller
   frontplate_left:
     - name: board_left
     - operation: subtract

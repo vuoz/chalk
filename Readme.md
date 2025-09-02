@@ -59,9 +59,9 @@
 ### Printing & using the custom keycaps
 1. Find the "convexfoam-standoffs.step" in /3dfiles folder
 2. Import into your slicer of choice
-3. Use highest resolution printing settings
-4. Print the keycaps top side down
-5. Scale keycap to: {x: 16.5mm y: 16.55mm}, though this migh vary depending on printer and filament. I would recommend printing a grid of keycaps with differnt sclaing combinations.
+3. Select the highest resolution printing settings
+4. Orient the keycaps top side down
+5. Scale keycap to: {x: 16.5mm y: 16.55mm}, though this might vary depending on printer and filament. I would recommend printing a grid of keycaps with differnt sclaing combinations as a first fit test.
     - **make sure no to scale uniformly**
 6. Cut out a tiny piece of eva foam (1mm tickness) and insert it into the keycap. Exact dimension for the foam are {x: 13.9 y: 11.1}
 7. Carefully set the keycap on the switch and press down slightly, making sure not to loose the foam.

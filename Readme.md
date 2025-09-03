@@ -61,7 +61,7 @@
     -  [0.5mm poron foam](https://amzn.eu/d/any7tR6)
     -  [1mm eva foam](https://amzn.eu/d/0Njnhbg)
 2. Import into your slicer of choice
-3. Select the highest resolution printing settings
+3. Select the highest resolution printing settings and with a 0.2mm nozzle
 4. Orient the keycaps top side down
 5. Scale keycap to: {x: 16.5mm y: 16.55mm}, though this might vary depending on printer and filament. I would recommend printing a grid of keycaps with differnt sclaing combinations as a first fit test.
     - **make sure no to scale uniformly**

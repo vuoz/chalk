@@ -6,7 +6,7 @@ pcbs/~combined.kicad_pcb.lck
 pcbs/reversible.step
 gerbers/Archive.zip
 pcbs/combined.step
-
 pcbs/~reversible.kicad_pcb.lck
 pcbs/reversible.step
 pcbs/reversible-backups
+pcbs/fabrication-toolkit-options.json

@@ -57,14 +57,17 @@
 - Print the top part of the case with the top of the case facing down ( therfore Y-axis rotated by 180 degrees ), this improves the finish of the case.
 
 ### Printing & using the custom keycaps
-1. Find the "convexfoam-standoffs.step" in /3dfiles folder
+1. Find the keycap step files in the /3dfiles folder. You can either select the keycap with 1mm or 0.5mm room for foam. The 1mm version will be quieter, while the 0.5mm preservers the 6mm overall thickness of the board.
+    -  [0.5mm poron foam](https://amzn.eu/d/any7tR6)
+    -  [1mm eva foam](https://amzn.eu/d/0Njnhbg)
 2. Import into your slicer of choice
 3. Select the highest resolution printing settings
 4. Orient the keycaps top side down
 5. Scale keycap to: {x: 16.5mm y: 16.55mm}, though this might vary depending on printer and filament. I would recommend printing a grid of keycaps with differnt sclaing combinations as a first fit test.
     - **make sure no to scale uniformly**
-6. Cut out a tiny piece of eva foam (1mm tickness) and insert it into the keycap. Exact dimension for the foam are {x: 13.9 y: 11.1}
-7. Carefully set the keycap on the switch and press down slightly, making sure not to loose the foam.
+6. Print in small batches for higher consistency, I printed max 9 at a time. Printing all at once will lead to dimensions all over the place and havint to scrap the whole batch.
+7. Cut out a tiny piece of eva or poron foam (1mm or 0.5mm tickness depending on the keycap you selected ) and insert it into the keycap. Exact dimension for the foam are {x: 13.9 y: 11.1}
+8. Carefully set the keycap on the switch and press down slightly, making sure not to loose the foam.
 
  
 #### Credits

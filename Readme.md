@@ -16,7 +16,7 @@
 ### Disclaimer (s)
 
 - Even though this can be hand soldered, this is an advanced project, if you have never built a keyboard I would advise against this being your first project
-- You will need a good soldering iron and well flowing solder, but please use lead free. Flux helps with the soldering process, so be sure to have it on hand. I was able to manage soldering without, so it is possible to manage without.
+- You will need a good soldering iron and well flowing solder, but please use lead free. Flux helps with the soldering process, so be sure to have it on hand.
 - Make sure to work in a well ventilated area and wash your hands afterwards.
 - These switches are super unforgiving. You will most likely not be able to desolder these once attached. Take you time and be aware that one simple mistake could ruin the whole board
 - The battery is quite a tight fit. Some varients might not fit perfectly, others will. Mathematically it should, but small deviations in size might affect the fit.

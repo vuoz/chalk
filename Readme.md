@@ -11,6 +11,15 @@
 - 42 key layout
 - extremely light and portable
 
+### Quick note about the license
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+#### This means:
+- You are free to share and adapt this work, as long as you give appropriate credit
+- If you adapt this work, you have to share it under the same license
+- You cannot use this work for commercial purposes
+- **If you just want to build this keyboard for yourself, you are totally free to do so.**
+
 
 
 ### Disclaimer (s)

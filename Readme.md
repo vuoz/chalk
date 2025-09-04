@@ -124,7 +124,7 @@ Mike also has a [guide](https://github.com/mikeholscher/zmk-config-mikecinq?tab=
 
 
 ### credits
-- Thanks to [mikeholscher](https://github.com/mikeholscher) for the bases of the pg1316 footprints. He also helped with many other questions and considerations around my design. Huge thanks to him for being so supportive. I modified them slightly to improve soldering and adapted them to ergogen but the original was provided on his [Github](https://github.com/mikeholscher/zmk-config-mikefive/tree/main/files/footprint-and-cad)
+- Thanks to [mikeholscher](https://github.com/mikeholscher) for the original base of the pg1316 footprints. I modified the to fit my design and soldering process. He also helped with many other questions and considerations around my design. Huge thanks to him for being so supportive. 
 - Thanks to these tools for making creating zmk pyhsical layouts easier:
     - [Zmk pyhsical layout converter](https://zmk-physical-layout-converter.streamlit.app/)
     - [Keymap layout helper](https://nickcoutsos.github.io/keymap-layout-tools/)

@@ -1,4 +1,5 @@
 # Chalk, an ultra low profile split keyboard 
+![preview](./imgs/IMG_5436.jpeg)
 ![preview](./imgs/IMG_5312.jpeg)
 ![preview transparent](./imgs/IMG_5293.jpeg)
 
@@ -18,7 +19,6 @@
 - You will need a good soldering iron and well flowing solder, but please use lead free. Flux helps with the soldering process, so be sure to have it on hand. I was able to manage soldering without, so it is possible to manage without.
 - Make sure to work in a well ventilated area and wash your hands afterwards.
 - These switches are super unforgiving. You will most likely not be able to desolder these once attached. Take you time and be aware that one simple mistake could ruin the whole board
-- Out of the box these switchs sound horrendous, you will need to do some mods. [Mikeholscher](https://github.com/mikeholscher/zmk-config-mikefive/tree/main/files/mods) has some guides . I am still experimenting.
 - The battery is quite a tight fit. Some varients might not fit perfectly, others will. Mathematically it should, but small deviations in size might affect the fit.
 
 
@@ -27,8 +27,7 @@
 - Specs:
     - 1mm thickness ( the case is designed for a 1mm thick PCB ) 
     - lead free HASL ( not required but recommended )
-    - Pick a nice solder mask color. There is no space for a frontplate, so the solder mask will be visible.
-
+    - Choose any color you like, but green will be cheapest in the Lead free HASL + 1mm thickness combination. If you pick an undisireable color, you will need to print a silkscreen cover and apply it with glue to the pcb later.
 
 ## Build guide
 
@@ -94,13 +93,38 @@ Most images in this guide were taken with an earlier version of the PCB, but the
 11. Now attach the power switch. Make sure not to use too much solder. The fit between case and reset switch is quite tight. To solder the power switch, first put the power switch into its holes on the pcb. Hold it in place with a tweezer and add a bit of solder to one of the pads. Then add solder to all of the other pads.  ![power switch](./imgs/IMG_5273.jpeg)
 12. Now we will attach the battery. Make sure the battery cables are cut to lenght. There should not be too much slack, since that would use up too much space in the case. **Before soldering, please check the polarity on the battery.** Take the insulation of the ends of the cables and place them through the holes for the battery , then solder them in place. Turn the PCB around and cut of the excess of the cables. ![](./imgs/IMG_5274.jpeg)
 13. Repeat all the steps for the other half of the keyboard, by taking another PCB and flipping it around. Solder all components on this side, otherwise you end up with 2 left sides.
-14. To attach the threaded inserts, take the top part of the case and place the threaded inserts in the preprinted holes. Use a big attachment for your soldering iron and set its temperature to 400C. Now slowly heat of the threaded insert until it sits flush with the case. Make sure that the threaded inserts are level and did not twist or are not straight. ![theaded inserts](./imgs/IMG_5277.jpeg) ![threade inserts sunken](./imgs/IMG_5278.jpeg)
+14. To attach the heated inserts, take the top part of the case and place the threaded inserts in the preprinted holes. Use a big attachment for your soldering iron and set its temperature to 400C. Now slowly heat of the threaded insert until it sits flush with the case. Make sure that the threaded inserts are level and did not twist or are not straight. ![theaded inserts](./imgs/IMG_5277.jpeg) ![threade inserts sunken](./imgs/IMG_5278.jpeg)
 15. After the previous step, place the top case on top of the pcb, turn it around and attach the bottom part of the case with the M2 screws.  ![backplate](./imgs/IMG_5305.jpeg)
-16. Now insert the rubber pads in the preprinted holes. 
-17. Repeat the case assembly for the other half of the keyboard.
-18. Lastly, put a little bit of adhesive on on the button of the reset switch. Now attach the reset switch cover and press it down slightly. The stl files for the reset switch cover can be found in /3dfiles. Make sure to print them at the highest quality setting to ensure accuracy. ![reset switch cover](./imgs/IMG_5309.jpeg)
+16. **Optional** Silkscreen cover: Print your silkscreen covers with maximal accuracy and carefully remove them from the printplate, they can rip easily. Take you already assebled board and brush the silkscreen (the white, green or black area depening on which color you ordered) around the switches with glue, making sure not to miss any spots or glue any of the plasitc parts of the switch ![silkscreen cover](./imgs/IMG_5431.jpeg)
+Now carefully place the silkscreen cover on top of the glue you just applied and press down with a pair of tweezers to ensure proper adhesion. Make sure it is aligned properly with the case and there are no uncoverd areas poking through. You may wonder about the order of operations. Having the case screwed in already, while gluing the silscreencover ensures that the silscreen cover is placed correctly and avoids any misalignments. If there are loose spots around the edges you can unscrew the case and fix those by applying more adhesive to those spots. Though be carefuly not to shift the while silkscreen cover, while fixing small spots. ![silkscreen cover in place](./imgs/IMG_5432.jpeg)
+17. Now insert the rubber pads in the preprinted holes on the backplate. 
+18. Repeat the case assembly for the other half of the keyboard.
+19. Lastly, put a little bit of adhesive on on the button of the reset switch. Now attach the reset switch cover and press it down slightly. The stl files for the reset switch cover can be found in /3dfiles. Make sure to print them at the highest quality setting to ensure accuracy. ![reset switch cover](./imgs/IMG_5309.jpeg)
+
+### Keycap assembly
+1. Take on of you printed keycaps and cut out a piece of foam (1mm or 0.5mm depending on the keycap model you printed) with the dimensions 13.9mmx11.1mm
+2. Place the foam inside the keycap. If you want you can use a tiny bit of adhesive to fix it in place, but I have lived without and it works fine. ![foam keycap](./imgs/IMG_5434.jpeg)
+3. Now carefully place the keycap on the switch making sure the foam did not move significantly. Press down slightly to lock the keycap in position. 
+4. Conduct a quick test, wether the switch works and still springs back. If that is not the case, remove the keycap and adjust either the keycap model, if that is the case for all keycaps or alter the foam dimensions if only this switch is no longer springing back..
+
+
+### Keycap removal 
+#### Requirements
+- Have a bend pair of tweezers ready. These making grabbing under the keycap much easier.
+- Have a small spudger on hand for moving the keycap. 
+
+#### Proccess
+1. Use your spudger to move the keycap slightly in the y direction. Never, I mean NEVER try this while moving the keycap in x direction.
+2. While still pressing the keycap in y direction, use you tweezers to lift of the edge ( the edge in the direction you are pressing the keycap) up. 
+3. This side of the keycap should now be detached from the switch. 
+4. Use your tweezers to carefully remove the keycap, by also loosening the other side of the keycap.
+
+Mike also has a [guide](https://github.com/mikeholscher/zmk-config-mikecinq?tab=readme-ov-file#about-removing-keycaps) on keycap removal, if you found mine hard to follow or badly worded.
+
+
+
 ### credits
-- Thanks to [mikeholscher](https://github.com/mikeholscher) for the bases of the pg1316 footprints. I modified them slightly to improve soldering and adapted them to ergogen but the original was provided on his [Github](https://github.com/mikeholscher/zmk-config-mikefive/tree/main/files/footprint-and-cad)
+- Thanks to [mikeholscher](https://github.com/mikeholscher) for the bases of the pg1316 footprints. He also helped with many other questions and considerations around my design. Huge thanks to him for being so supportive. I modified them slightly to improve soldering and adapted them to ergogen but the original was provided on his [Github](https://github.com/mikeholscher/zmk-config-mikefive/tree/main/files/footprint-and-cad)
 - Thanks to these tools for making creating zmk pyhsical layouts easier:
     - [Zmk pyhsical layout converter](https://zmk-physical-layout-converter.streamlit.app/)
     - [Keymap layout helper](https://nickcoutsos.github.io/keymap-layout-tools/)

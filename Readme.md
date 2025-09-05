@@ -1,7 +1,10 @@
 # Chalk, an ultra low profile split keyboard 
 ![preview](./imgs/IMG_5436.jpeg)
-![preview](./imgs/IMG_5312.jpeg)
-![preview transparent](./imgs/IMG_5293.jpeg)
+![preview ](./imgs/IMG_5451.jpeg)
+![preview ](./imgs/IMG_5458.jpeg)
+![preview ](./imgs/IMG_5456.jpeg)
+![preview ](./imgs/IMG_5454.jpeg)
+![preview ](./imgs/IMG_5459.jpeg)
 
 ### Features
 - Ultra low profile, 6mm thickness

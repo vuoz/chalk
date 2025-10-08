@@ -41,6 +41,37 @@ This work is licensed under a
     - lead free HASL ( not required but recommended )
     - Choose any color you like, but green will be cheapest in the Lead free HASL + 1mm thickness combination. If you pick an undisireable color, you will need to print a silkscreen cover and apply it with glue to the pcb later.
 
+### More convenient option
+
+**Disclaimer: this is experimental, proceed with caution and on your own financial risk. I have not yet fully verified all the details. Once this is fully tested this note will disappear.**
+
+There is also an option to order the PCB partly preassembled using PCBA. I have only tested this with JLC. 
+You can get the pcb presoldered with diodes, power and reset switch, so you only have to solder MCU, switches and the battery. This does increase the cost by a bit, but especially soldering the diodes is quite tedious, which is why one might opt for this option.
+
+
+#### Approach:
+- Order one batch of PCBs with top side PCBA
+- Order another batch PCBs with bottom side PCBA
+
+#### Disclaimers
+- This increases the cost of the PCBs quite a bit and is not really worth it for a single board, because the setup cost for PCBA will occure twice, since you are ordering two batches. If you order more boards or plan on ordering with friends this approach can be totaly worth it. 
+- For my test I ordered PCBs for 10 full boards, which cost around 100$ with PCBA. Decreasing quantity to 5 boards does not really reduce the cost by much, since the setup fees and egineering fees are the most expensive part of the order.
+
+#### Steps
+1. Upload the gerber (also use the gerber zip files in the /production_files directory) files to your PCB manufacturer
+2. Select 1mm thickness, lead free HASL and your color of choice
+3. Select PCBA and Top side assembly and click "Added by customer" for the "tooling holes option"
+4. Upload the  BOM and CPL ( **use "CPL_reversible.csv"** ) files found in the /production_files folder
+5. Follow the steps and visually confirm that all the parts are placed correctly. If you spot any anomalies, open an issue
+
+**Now we reapeat this for the bottom side**
+
+1. Upload the gerber files  (also use the gerber zip files in the /production_files directory) to your PCB manufacturer
+2. Select 1mm thickness, lead free HASL and your color of choice
+3. Select PCBA and bottom side assembly and click "Added by customer" for the "tooling holes option"
+4. Upload the BOM and CPL ( **use "CPL_reversible_bottom.csv"** ) files found in the /production_files folder
+5. Follow the steps and visually confirm that all the parts are placed correctly. If you spot any anomalies, open an issue
+
 ## Build guide
 
 ### Bom
@@ -51,6 +82,10 @@ This work is licensed under a
 - 42x PG1316s switches (buy at least 50, to have some spares)
 - 42x PG1316s keycaps 
 - 2x [Reset switch](https://42keebs.eu/shop/parts/components/reset-switch/?attribute_type=Through-hole%202-pin%206x3&attribute_pa_colour=black)
+    - As of  PCB version 0.1.2 I have dicided to go with a thinner reset switch. It can be found on amazon in this [kit](https://www.amazon.de/dp/B08JQ2WS7D)
+    - This is the switch you are looking for once you have received the kit:   
+![image](./imgs/rst-switch.jpeg)
+
 - 2x [Power switch](https://42keebs.eu/shop/parts/components/power-switch/)
 - 8x [M2 3mm depth x 3.5 mm theaded inserts](https://www.amazon.de/dp/B0D9YK4PY1)
 - 8x [M3 3mm flat head screws](https://www.amazon.de/dp/B0D4557749)

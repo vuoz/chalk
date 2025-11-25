@@ -171,6 +171,12 @@ I have tried loads for different combinatations. From 0.3 bumps to 0.1mm bumps w
 Mike also has a [guide](https://github.com/mikeholscher/zmk-config-mikecinq?tab=readme-ov-file#about-removing-keycaps) on keycap removal, if you found mine hard to follow or badly worded.
 
 
+### Firmware 
+I have made a separate repository for the firmware,which allows you to build the firmwarre locally with nix or build tradtionally via github actions.
+Futermore this allows you to fork the config repo without having to fork this whole repo with all its files.
+
+Find the config repo here: 
+- [config repo](https://github.com/vuoz/chalk_config)
 
 ### credits
 - Thanks to [mikeholscher](https://github.com/mikeholscher) for the original base of the pg1316 footprints. I modified the to fit my design and soldering process. He also helped with many other questions and considerations around my design. Huge thanks to him for being so supportive. 

@@ -172,8 +172,8 @@ Mike also has a [guide](https://github.com/mikeholscher/zmk-config-mikecinq?tab=
 
 
 ### Firmware 
-I have made a separate repository for the firmware,which allows you to build the firmwarre locally with nix or build tradtionally via github actions.
-Futermore this allows you to fork the config repo without having to fork this whole repo with all its files.
+I have made a separate repository for the firmware, which allows you to build the firmware locally with nix or build tradtionally via github actions.
+Furthermore this allows you to fork the config repo without having to fork this whole repo with all its files.
 
 Find the config repo here: 
 - [config repo](https://github.com/vuoz/chalk_config)

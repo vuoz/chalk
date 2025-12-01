@@ -1,8 +1,6 @@
-# Important notice
-Right now there is an issue in the PCB once reversed for the right side. That shorts GND and RST together, which leads to permanent resetting of the controller.
-I am currently updating the PCB to fix this issue. 
-Apologies for everybody effected by this.
-Do not order new PCBs until this notice is gone.
+# Important notice: Currently there  is an issue in the PCB once reversed for the right side. 
+
+That shorts GND and RST together, which leads to permanent resetting of the controller. I am currently updating the PCB to fix this issue. Apologies for everybody effected by this. Do not order new PCBs until this notice is gone. Fix is being tracked on this [branch](https://github.com/vuoz/chalk/tree/fix01)
 
 # Chalk, an ultra low profile split keyboard 
 ![preview](./imgs/IMG_5436.jpeg)

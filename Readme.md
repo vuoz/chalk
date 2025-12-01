@@ -1,3 +1,9 @@
+# Important notice
+Right now there is an issue in the PCB once reversed for the right side. That shorts GND and RST together, which leads to permanent resetting of the controller.
+I am currently updating the PCB to fix this issue. 
+Apologies for everybody effected by this.
+Do not order new PCBs until this notice is gone.
+
 # Chalk, an ultra low profile split keyboard 
 ![preview](./imgs/IMG_5436.jpeg)
 ![preview ](./imgs/IMG_5451.jpeg)
@@ -5,6 +11,7 @@
 ![preview ](./imgs/IMG_5456.jpeg)
 ![preview ](./imgs/IMG_5454.jpeg)
 ![preview ](./imgs/IMG_5459.jpeg)
+
 
 ### Features
 - Ultra low profile, 6mm thickness

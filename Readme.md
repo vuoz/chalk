@@ -1,6 +1,6 @@
-# Important notice: Currently there  is an issue in the PCB once reversed for the right side. 
-
+# Important notice: Currently there is an issue in the PCB once reversed for the right side. 
 That shorts GND and RST together, which leads to permanent resetting of the controller. I am currently updating the PCB to fix this issue. Apologies for everybody effected by this. Do not order new PCBs until this notice is gone. Fix is being tracked on this [branch](https://github.com/vuoz/chalk/tree/fix01)
+### This only affects version 0.1.2 of the PCB
 ## Workaround for Version 0.1.2
 There is a workaround which will make your keyboard usable. 
 Just do not solder the top bottom pads for the right side of the microcontroller.    

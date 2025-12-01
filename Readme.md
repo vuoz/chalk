@@ -1,6 +1,11 @@
 # Important notice: Currently there  is an issue in the PCB once reversed for the right side. 
 
 That shorts GND and RST together, which leads to permanent resetting of the controller. I am currently updating the PCB to fix this issue. Apologies for everybody effected by this. Do not order new PCBs until this notice is gone. Fix is being tracked on this [branch](https://github.com/vuoz/chalk/tree/fix01)
+## Workaround for Version 0.1.2
+There is a workaround which will make your keyboard usable. 
+Just do not solder the top bottom pads for the right side of the microcontroller.    
+This means that your right reset switch does not work, but since you only have to flash the right side once (if left is your central, which is the most common approach) this should be an acceptable workaround.
+If you ever need to reset your right side you can use the reset switch on on the microcontroller itself. This obviously comes with an inconvienience. For debugging your firmware I would leave the right board disassembled.
 
 # Chalk, an ultra low profile split keyboard 
 ![preview](./imgs/IMG_5436.jpeg)

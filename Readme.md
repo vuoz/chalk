@@ -11,6 +11,7 @@ If you ever need to reset your right side you can use the reset switch on on the
 - [x] Issue was identified
 - [x] New PCB version is on the [fix01 branch](https://github.com/vuoz/chalk/tree/fix01)
 - [x] PCBs are ordered
+- [x] PCBs have arrived, verification still pending
 - [ ] Verify new PCBs
 - [ ] Verify and update Firmware
 - [ ] Merge fix

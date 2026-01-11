@@ -11,3 +11,5 @@ pcbs/reversible.step
 pcbs/reversible-backups
 pcbs/fabrication-toolkit-options.json
 pcbs/jlcpcb
+pcbs/_autosave-panel-reference.kicad_prl
+pcbs/panel.step

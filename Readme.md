@@ -1,8 +1,20 @@
-# Important notice
-Right now there is an issue in the PCB once reversed for the right side. That shorts GND and RST together, which leads to permanent resetting of the controller.
-I am currently updating the PCB to fix this issue. 
-Apologies for everybody effected by this.
-Do not order new PCBs until this notice is gone.
+# Important notice: The main branch version 0.1.2 currently has an issue in the pcb.
+The mistake shorts GND and RST together, which leads to permanent resetting of the controller on the right side ( **left side is not affected** ). I am currently updating the PCB to fix this issue. Apologies for everybody affected by this. Do not order new PCBs until this notice is gone. Fix is being tracked on this [branch](https://github.com/vuoz/chalk/tree/fix01)   
+#### This only affects version 0.1.2 of the PCB
+## Workaround for Version 0.1.2
+There is a workaround which will make your keyboard usable:
+Do not solder the top underside pads for the right side pcb for the connection the microcontroller.    
+This means that your right reset switch does not work, but since you only have to flash the right side once (if left is your central, which is the most common approach) this should be an acceptable workaround.
+If you ever need to reset your right side you can use the reset switch on on the microcontroller itself. This obviously comes with an inconvienience. For debugging your firmware I would leave the right board disassembled.
+
+## Fix progress
+- [x] Issue was identified
+- [x] New PCB version is on the [fix01 branch](https://github.com/vuoz/chalk/tree/fix01)
+- [x] PCBs are ordered
+- [x] PCBs have arrived, verification still pending
+- [ ] Verify new PCBs
+- [ ] Verify and update Firmware
+- [ ] Merge fix
 
 # Chalk, an ultra low profile split keyboard 
 ![preview](./imgs/IMG_5436.jpeg)
@@ -126,6 +138,10 @@ Most images in this guide were taken with an earlier version of the PCB, but the
 5. Now we will attach the controller. The controller should come with a pair of headers. These can be very handy to fix the controller in place while soldering. Place the controller on top of the PCB then place the package on a breadboard and then stick the headers through the pads, this keeps the controller in place while soldering.  ![controller](./imgs/IMG_5262.jpeg)
 6. To solder the controller, only attach solder on the side of the controller. Turn down your soldering iron's temperature to 330C max. You do not want to fry the controller. Do not try so solder where the headers are. Once a few solder joints have been made, you can carefully pull out the headers with a pair or tweezers. Now touch up all the solder joints and make sure that there are no cold joints.  ![controller solder](./imgs/IMG_5263.jpeg) ![controller solder side profile](./imgs/IMG_5264.jpeg)
 7. Now turn the PCB around and drop solder into the cutouts on the back of the pcb ( the cutouts for the controller ). These joint are necessary for the battery connection and the reset switch. ![back](./imgs/IMG_5265.jpeg) ![back soldered](./imgs/IMG_5266.jpeg)
+**Workaround for version 0.1.2**
+    -  **only** on the right side pcb: cut these two traces on the backside of the pcb ![cut](./imgs/IMG_8244.jpeg)
+    - make sure not to cut any other traces 
+    - to verify that the traces were actually cut use a multimeter to test continuity with the right pad ( the circular one you just dropped solder in) to gnd. If it is still connected to GND the issue will persist.
 8. Now to the hard part, the switches. Please be very careful here and take you time. Check everything twice before soldering. Place a column of switches on the front of the pcb. Make sure that all switches fall into the holes. If they are not placed correclty **do not solder**. Fix the alignment first. Once all switches in the column are in place, take a piece of tape and temporarely fix them in place. Now turn the board around and drop solder into the through holes on the back for the column you are soldering. It is really important that the solder flows well. Use a very well flowing solder and make sure it had time to flow fully. I used this [solder](https://www.amazon.de/gp/product/B0CG182RLW) and had my soldering iron at 400C. After you have filled all through holes for the column, test all connections with a multimeter. If the multimeter does not show continuity at this point, **you have to reflow the solder, until it shows continuity!** Now repeat that for all columns of the board.  ![columns](./imgs/IMG_5269.jpeg)
 9. Once all the switches are attached from the back, you can now solder the front pads. **It is very important to only add a very tiny amount of solder to the pads, otherwise it will block the switches.  Less is more!!! This is very important.**  Using a thin soldering wire can help dose correctly. Using a thick soldering wire above 0.8mm will most likely make this process much harder. ![front soldered](./imgs/IMG_5271.jpeg)
 10. Now attach the reset switch. Place the legs through the through holes. Then add solder to the top of the through holes. Afterwards, make sure to cut the legs flush on the backside, otherwise they will interfere with the backplate. ![reset switch](./imgs/IMG_5270.jpeg)

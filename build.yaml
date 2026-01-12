@@ -7,5 +7,5 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: xiao_ble 
     shield: chalk_right 
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble 
     shield: settings_reset
